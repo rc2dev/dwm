@@ -217,6 +217,8 @@ static Key keys[] = {
 	{ MODKEY,                       XK_r,      spawn,          SHCMD("virt-manager") },
 	{ MODKEY,                       XK_w,      spawn,          SHCMD("x-www-browser") },
 	{ MODKEY|ShiftMask,             XK_w,      spawn,          SHCMD("x-www-browser --incognito") },
+	{ MODKEY|Mod1Mask,              XK_w,      spawn,          SHCMD("chromium") },
+	{ MODKEY,                       XK_a,      spawn,          SHCMD("$TERMINAL -e taskwarrior-tui") },
 
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
