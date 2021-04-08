@@ -207,8 +207,11 @@ static Key keys[] = {
 
 	/* Applications */
 	{ 0,                            XF86XK_Calculator, spawn,  SHCMD("gnome-calculator") },
+	{ MODKEY,                       XK_a,      spawn,          SHCMD("chromium --profile-directory=\"Default\"") },
+	{ MODKEY|ShiftMask,             XK_a,      spawn,          SHCMD("chromium --profile-directory=\"Profile 1\"") },
 	{ MODKEY,                       XK_c,      spawn,          SHCMD("webapp whatsapp & telegram") },
 	{ MODKEY|ShiftMask,             XK_c,      spawn,          SHCMD("killall telegram & xdotool windowclose `xdotool search --name WhatsApp`") },
+	{ MODKEY|Mod1Mask,              XK_d,      spawn,          SHCMD("light-dark") },
 	{ MODKEY,                       XK_e,      spawn,          SHCMD("$TERMINAL -e vim +Files $HOME") },
 	{ MODKEY,                       XK_f,      spawn,          SHCMD("$TERMINAL -e ranger") },
 	{ MODKEY|ShiftMask,             XK_f,      spawn,          SHCMD("nemo") },
@@ -220,12 +223,10 @@ static Key keys[] = {
 	{ MODKEY|ControlMask|Mod1Mask,  XK_n,      spawn,          SHCMD("$TERMINAL -e notes f") },
 	{ MODKEY|ControlMask,           XK_n,      spawn,          SHCMD("$TERMINAL -e notes j") },
 	{ MODKEY,                       XK_o,      spawn,          SHCMD("webapp euinc") },
-	{ MODKEY|ShiftMask,             XK_o,      spawn,          SHCMD("light-dark") },
+	{ MODKEY|ShiftMask,             XK_o,      spawn,          SHCMD("$TERMINAL -e taskwarrior-tui") },
 	{ MODKEY,                       XK_p,      spawn,          SHCMD("keepassxc") },
 	{ MODKEY,                       XK_w,      spawn,          SHCMD("x-www-browser") },
 	{ MODKEY|ShiftMask,             XK_w,      spawn,          SHCMD("x-www-browser --incognito") },
-	{ MODKEY|Mod1Mask,              XK_w,      spawn,          SHCMD("chromium") },
-	{ MODKEY,                       XK_a,      spawn,          SHCMD("$TERMINAL -e taskwarrior-tui") },
 
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
@@ -245,7 +246,7 @@ static Button buttons[] = {
 	{ ClkLtSymbol,          0,              Button1,        setlayout,      {0} },
 	{ ClkLtSymbol,          0,              Button3,        setlayout,      {.v = &layouts[2]} },
 	{ ClkWinTitle,          0,              Button2,        zoom,           {0} },
-	{ ClkWinTitle,          0,              Button1,        spawn,          SHCMD("nemo") },
+	{ ClkWinTitle,          0,              Button3,        spawn,          SHCMD("nemo") },
 	{ ClkStatusText,        0,              Button1,        spawn,          SHCMD("zenity --calendar") },
 	{ ClkStatusText,        0,              Button2,        spawn,          SHCMD("pavucontrol") },
 	{ ClkStatusText,        0,              Button9,        spawn,          {.v = player_next } },
