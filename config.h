@@ -181,7 +181,6 @@ static Key keys[] = {
 	{ MODKEY,                       XK_d,      spawn,          SHCMD("dmenu_run++ -g 10 -l 15")  },
 	{ MODKEY|ShiftMask,             XK_d,      spawn,          SHCMD("j4-dmenu-desktop --dmenu='dmenu -g 10 -l 15'") },
 	{ MODKEY,                       XK_e,      spawn,          SHCMD("dmenu_yt") },
-	{ MODKEY,                       XK_s,      spawn,          SHCMD("dmenu_ssh") },
 	{ MODKEY,                       XK_r,      spawn,          SHCMD("dmenu_url") },
 	{ ControlMask|Mod1Mask,         XK_v,      spawn,          SHCMD("clipmenu") },
 	{ MODKEY,                       XK_F1,     spawn,          SHCMD("dmenu_man") },
