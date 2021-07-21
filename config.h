@@ -60,7 +60,7 @@ static const Rule rules[] = {
 	{ NULL,       NULL,       "Event Tester", 0,        0,           0,          0,          1,         -1 },
 
 	/* Tags */
-	{ "Alacritty", "sys",     NULL,       1 << 6,       0,           0,          0,          0,         -1 },
+	{ "Alacritty", "sys",     NULL,       1 << 7,       0,           0,          0,          0,         -1 },
 	{ "Alacritty", "cmus",    NULL,       1 << 8,       0,           0,          0,          0,         -1 },
 	{ "Spotify",  NULL,       NULL,       1 << 8,       0,           0,          0,          0,         -1 },
 };
