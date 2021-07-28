@@ -10,6 +10,7 @@ dwm is an extremely fast, small, and dynamic window manager for X.
 - bar height
 - cyclelayouts
 - fixborders
+- noborder
 - restartsig
 - scratchpad
 - sticky
@@ -25,6 +26,7 @@ dwm is an extremely fast, small, and dynamic window manager for X.
 - Complement to `vanitygaps` patch: Allow toggling smartgaps on runtime.
 - Complement to `vanitygaps` patch: Add gaps to monocle.
 - Complement to `vanitygaps` patch: Add `vanitygaps.c` to `Makefile`, so changes are detected.
+- Complement to `noborder` patch: Draw borders if gaps are enabled.
 - Complement to `sticky` patch: Ignore sticky flag if fullscreen.
   Sticking a full screen window is not useful and prevents from switching tags (see commit e04a608).
 - Key and mouse binds, window rules, aesthetics.
