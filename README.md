@@ -20,8 +20,8 @@ dwm is an extremely fast, small, and dynamic window manager for X.
 
 ## My own patches
 
-- Make layout button toggle between tiling and monocle.
 - Add class to systray. This allows adding rules for it on compton.
+- Make layout symbol toggle between tiling and monocle.
 - Move colors to separate file. Add file with default colors.
 - Complement to `vanitygaps` patch: Allow toggling smartgaps on runtime.
 - Complement to `vanitygaps` patch: Add gaps to monocle.
