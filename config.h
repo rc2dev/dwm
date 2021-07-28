@@ -13,7 +13,7 @@
 #define Button9 9
 
 /* appearance */
-static const unsigned int borderpx  = 3;        /* border pixel of windows */
+static const unsigned int borderpx  = 2;        /* border pixel of windows */
 static const unsigned int snap      = 32;       /* snap pixel */
 static const unsigned int gappih    = 16;       /* horiz inner gap between windows */
 static const unsigned int gappiv    = 16;       /* vert inner gap between windows */
@@ -141,6 +141,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_z,      view,           {0} },
 	{ MODKEY,                       XK_q,      killclient,     {0} },
 	{ MODKEY|ShiftMask,             XK_q,      spawn,          SHCMD("xkill") },
+	{ MODKEY,                       XK_x,      spawn,          SHCMD("flash-window") },
 	{ MODKEY,                       XK_comma,  cyclelayout,    {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  cyclelayout,    {.i = -1 } },
 	//{ MODKEY|ShiftMask,             XK_Return, setlayout,      {0} },
