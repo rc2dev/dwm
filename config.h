@@ -57,6 +57,7 @@ static const Rule rules[] = {
 
 	/* Swallow */
 	{ "Alacritty", NULL,      NULL,       0,            0,           0,          1,          0,         -1 },
+	{ "st-256color", NULL,    NULL,       0,            0,           0,          1,          0,         -1 },
 	{ NULL,       NULL,       "Event Tester", 0,        0,           0,          0,          1,         -1 },
 
 	/* Tags */
@@ -116,7 +117,7 @@ static char dmenumon[2] = "0"; /* [> component of dmenucmd, manipulated in spawn
 static const char *dmenucmd[] = { "dmenu_run++", "-m", dmenumon, NULL };
 static const char *termcmd[] = { "/bin/sh", "-c", "$TERMINAL", NULL };
 static const char scratchpadname[] = "scratchpad";
-static const char *scratchpadcmd[] = { "alacritty", "-t", scratchpadname, "-o", "window.dimensions.columns=105", "-o", "window.dimensions.lines=30", NULL };
+static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "105x30",  NULL };
 static const char *volup[] = { "/bin/sh", "-c",  "pactl set-sink-volume @DEFAULT_SINK@ +7% && dwmbar", NULL };
 static const char *voldown[] = { "/bin/sh", "-c",  "pactl set-sink-volume @DEFAULT_SINK@ -7% && dwmbar", NULL };
 static const char *mute[] = { "/bin/sh", "-c",  "pactl set-sink-mute @DEFAULT_SINK@ toggle && dwmbar", NULL };
