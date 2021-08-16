@@ -218,7 +218,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_n,      spawn,          SHCMD("$TERMINAL -e notes name") },
 	{ MODKEY|ShiftMask,             XK_n,      spawn,          SHCMD("dmenu_notes") },
 	{ MODKEY,                       XK_o,      spawn,          SHCMD("$TERMINAL -e plan day") },
-	{ MODKEY|ShiftMask,             XK_o,      spawn,          SHCMD("$TERMINAL -e plan week") },
+	{ MODKEY|ShiftMask,             XK_o,      spawn,          SHCMD("$TERMINAL -e plan split") },
 	{ MODKEY,                       XK_p,      spawn,          SHCMD("keepassxc") },
 	{ MODKEY,                       XK_x,      spawn,          SHCMD("$TERMINAL -e zsh -ic 'o'") },
 	{ MODKEY|ShiftMask,             XK_x,      spawn,          SHCMD("$TERMINAL -e ranger --cmd=fzf_select") },
