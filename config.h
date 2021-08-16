@@ -61,8 +61,8 @@ static const Rule rules[] = {
 	{ NULL,       NULL,       "Event Tester", 0,        0,           0,          0,          1,         -1 },
 
 	/* Tags */
-	{ "Alacritty", "sys",     NULL,       1 << 7,       0,           0,          0,          0,         -1 },
-	{ "Alacritty", "cmus",    NULL,       1 << 8,       0,           0,          0,          0,         -1 },
+	{ "st-256color", "sys",     NULL,       1 << 7,       0,           0,          0,          0,         -1 },
+	{ "st-256color", "cmus",  NULL,       1 << 8,       0,           0,          0,          0,         -1 },
 	{ "Spotify",  NULL,       NULL,       1 << 8,       0,           0,          0,          0,         -1 },
 };
 
@@ -214,7 +214,7 @@ static Key keys[] = {
 	/* Workaround for launching on correct tag. */
 	{ MODKEY,                       XK_m,      view,           {.ui = 1 << 8} },
 	{ MODKEY,                       XK_m,      spawn,          SHCMD("spotify") },
-	{ MODKEY|ShiftMask,             XK_m,      spawn,          SHCMD("$TERMINAL --class cmus -e cmus") },
+	{ MODKEY|ShiftMask,             XK_m,      spawn,          SHCMD("$TERMINAL -c cmus -e cmus") },
 	{ MODKEY,                       XK_n,      spawn,          SHCMD("$TERMINAL -e notes name") },
 	{ MODKEY|ShiftMask,             XK_n,      spawn,          SHCMD("dmenu_notes") },
 	{ MODKEY,                       XK_o,      spawn,          SHCMD("$TERMINAL -e plan day") },
