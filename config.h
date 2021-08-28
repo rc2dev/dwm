@@ -209,6 +209,8 @@ static Key keys[] = {
 	{ MODKEY,                       XK_a,      spawn,          SHCMD("chromium --profile-directory=\"Default\"") },
 	{ MODKEY|ShiftMask,             XK_a,      spawn,          SHCMD("chromium --profile-directory=\"Profile 1\"") },
 	{ MODKEY|Mod1Mask,              XK_d,      spawn,          SHCMD("light-dark") },
+	{ MODKEY|ControlMask,           XK_d,      spawn,          SHCMD("greyscale on") },
+	{ MODKEY|ControlMask|ShiftMask, XK_d,      spawn,          SHCMD("greyscale off") },
 	{ MODKEY,                       XK_e,      spawn,          SHCMD("$TERMINAL -e vim +History") },
 	{ MODKEY,                       XK_f,      spawn,          SHCMD("$TERMINAL -e ranger") },
 	{ MODKEY|ShiftMask,             XK_f,      spawn,          SHCMD("nemo") },
