@@ -243,8 +243,8 @@ static Key keys[] = {
 /* click can be ClkTagBar, ClkLtSymbol, ClkStatusText, ClkWinTitle, ClkClientWin, or ClkRootWin */
 static Button buttons[] = {
 	/* click                event mask      button          function        argument */
-	{ ClkLtSymbol,          0,              Button1,        setlayout,      {.v = &layouts[0]} },
-	{ ClkLtSymbol,          0,              Button3,        setlayout,      {.v = &layouts[1]} },
+	{ ClkLtSymbol,          0,              Button1,        setlayout,      {.v = &layouts[1]} },
+	{ ClkLtSymbol,          0,              Button3,        setlayout,      {.v = &layouts[0]} },
 	{ ClkWinTitle,          0,              Button2,        zoom,           {0} },
 	{ ClkWinTitle,          0,              Button3,        spawn,          SHCMD("nemo") },
 	{ ClkStatusText,        0,              Button1,        spawn,          SHCMD("zenity --calendar") },
