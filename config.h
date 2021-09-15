@@ -61,7 +61,8 @@ static const Rule rules[] = {
 	{ NULL,       NULL,       "Event Tester", 0,        0,           0,          0,          1,         -1 },
 
 	/* Tags */
-	{ "st-256color", "sys",     NULL,       1 << 7,       0,           0,          0,          0,         -1 },
+	{ "st-256color", "sys",     NULL,       1 << 6,       0,           0,          0,          0,         -1 },
+	{ "Chromium-browser", "docs.google.com__spreadsheets_d_1u5q22YMmvNleFijg33sBbEiJMnfIDPkNxQ_mLyBacqU",  NULL,  1 << 7,  0, 0, 0, 0, -1 },
 	{ "st-256color", "cmus",  NULL,       1 << 8,       0,           0,          0,          0,         -1 },
 	{ "Spotify",  NULL,       NULL,       1 << 8,       0,           0,          0,          0,         -1 },
 };
@@ -222,6 +223,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_n,      spawn,          SHCMD("dmenu_notes") },
 	{ MODKEY,                       XK_o,      spawn,          SHCMD("$TERMINAL -e plan day") },
 	{ MODKEY|ShiftMask,             XK_o,      spawn,          SHCMD("$TERMINAL -e plan split") },
+	{ MODKEY|Mod1Mask,              XK_o,      spawn,          SHCMD("chromium --app='https://docs.google.com/spreadsheets/d/1u5q22YMmvNleFijg33sBbEiJMnfIDPkNxQ_mLyBacqU/'") },
 	{ MODKEY,                       XK_p,      spawn,          SHCMD("keepassxc") },
 	{ MODKEY,                       XK_x,      spawn,          SHCMD("$TERMINAL -e zsh -ic 'o'") },
 	{ MODKEY|ShiftMask,             XK_x,      spawn,          SHCMD("$TERMINAL -e ranger --cmd=fzf_select") },
