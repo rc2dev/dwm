@@ -11,10 +11,7 @@ all: dwm
 .c.o:
 	${CC} -c ${CFLAGS} $<
 
-${OBJ}: config.h config.mk colors.h vanitygaps.c
-
-colors.h:
-	cp colors.def.h $@
+${OBJ}: config.h config.mk vanitygaps.c
 
 dwm: ${OBJ}
 	${CC} -o $@ ${OBJ} ${LDFLAGS}
