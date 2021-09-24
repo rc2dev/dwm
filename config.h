@@ -69,13 +69,13 @@ static const Rule rules[] = {
 
 	/* Swallow */
 	{ "Alacritty", NULL,      NULL,       0,            0,           0,          1,          0,         -1 },
-	{ "st-256color", NULL,    NULL,       0,            0,           0,          1,          0,         -1 },
+	{ "St",        NULL,    NULL,       0,            0,           0,          1,          0,         -1 },
 	{ NULL,       NULL,       "Event Tester", 0,        0,           0,          0,          1,         -1 },
 
 	/* Tags */
-	{ "st-256color", "sys",     NULL,       1 << 6,       0,           0,          0,          0,         -1 },
+	{ "St",       "sys",      NULL,       1 << 6,       0,           0,          0,          0,         -1 },
 	{ "Chromium-browser", "docs.google.com__spreadsheets_d_1u5q22YMmvNleFijg33sBbEiJMnfIDPkNxQ_mLyBacqU",  NULL,  1 << 7,  0, 0, 0, 0, -1 },
-	{ "st-256color", "cmus",  NULL,       1 << 8,       0,           0,          0,          0,         -1 },
+	{ "St",       "cmus",     NULL,       1 << 8,       0,           0,          0,          0,         -1 },
 	{ "Spotify",  NULL,       NULL,       1 << 8,       0,           0,          0,          0,         -1 },
 };
 
