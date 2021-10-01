@@ -188,7 +188,7 @@ static Key keys[] = {
 
 	/* Layouts */
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} }, // tiling
-	{ MODKEY|ShiftMask,             XK_t,      setlayout,      {.v = &layouts[2]} }, // floating
+	{ MODKEY|ShiftMask,             XK_t,      setlayout,      {.v = &layouts[13]} }, // floating
 	{ MODKEY,                       XK_y,      setlayout,      {.v = &layouts[1]} }, // monocle
 	{ MODKEY|ShiftMask,             XK_y,      setlayout,      {.v = &layouts[4]} }, // deck
 	{ MODKEY,                       XK_i,      setlayout,      {.v = &layouts[2]} }, // spiral
