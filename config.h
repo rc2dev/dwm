@@ -250,9 +250,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_f,      spawn,          SHCMD("$TERMINAL -e ranger") },
 	{ MODKEY|ShiftMask,             XK_f,      spawn,          SHCMD("nemo") },
 	/* Workaround for launching on correct tag. */
-	{ MODKEY,                       XK_m,      view,           {.ui = 1 << 8} },
-	{ MODKEY,                       XK_m,      spawn,          SHCMD("spotify") },
-	{ MODKEY|ShiftMask,             XK_m,      spawn,          SHCMD("$TERMINAL -n cmus -e cmus") },
+	{ MODKEY,                       XK_m,      spawn,          SHCMD("$TERMINAL -n cmus -e cmus") },
 	{ MODKEY,                       XK_n,      spawn,          SHCMD("$TERMINAL -e notes name") },
 	{ MODKEY|ShiftMask,             XK_n,      spawn,          SHCMD("dmenu_notes") },
 	{ MODKEY,                       XK_o,      spawn,          SHCMD("$TERMINAL -e plan day") },
