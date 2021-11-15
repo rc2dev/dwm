@@ -22,13 +22,13 @@ dwm is an extremely fast, small, and dynamic window manager for X.
 
 ## My own patches
 
-- Add class to systray. This allows adding rules for it on compton.
 - Complement to `vanitygaps` patch: Allow toggling smartgaps on runtime.
 - Complement to `vanitygaps` patch: Add gaps to monocle.
 - Complement to `vanitygaps` patch: Add `vanitygaps.c` to `Makefile`, so changes are detected.
 - Complement to `noborder` patch: Draw borders if gaps are enabled.
 - Complement to `sticky` patch: Ignore sticky flag if fullscreen.
   Sticking a full screen window is not useful and prevents from switching tags (see commit e04a608).
+- Add class to systray. This allows adding rules for it on compton.
 - Key and mouse binds, window rules, aesthetics.
 
 ## Requirements
