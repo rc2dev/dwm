@@ -61,6 +61,7 @@ static const Rule rules[] = {
 	{ "Blueman-manager", NULL, NULL,      0,            1,           0,          0,          0,         -1 },
 	{ "Nm-connection-editor", NULL, NULL,      0,            1,           0,          0,          0,         -1 },
 	{ "flameshot", NULL,      NULL,       0,            1,           0,          0,          0,         -1 },
+	{ "photoshop.exe", NULL,      NULL,       0,            1,           0,          0,          0,         -1 },
 
 	/* Floating and sticky */
 	{ "mpv",      NULL,       NULL,       0,            1,           1,          0,          0,         -1 },
