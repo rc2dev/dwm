@@ -1,6 +1,6 @@
 # dwm - dynamic window manager
 
-Build of dwm by [Rafael Cavalcanti](https://rafaelc.org).
+Build of dwm by [Rafael Cavalcanti](https://rafaelc.org/dev).
 
 dwm is an extremely fast, small, and dynamic window manager for X.
 
