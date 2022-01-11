@@ -246,7 +246,7 @@ static Key keys[] = {
 	{ MODKEY|Mod1Mask,              XK_d,      spawn,          SHCMD("light-dark") },
 	{ MODKEY|ControlMask,           XK_d,      spawn,          SHCMD("greyscale on") },
 	{ MODKEY|ControlMask|ShiftMask, XK_d,      spawn,          SHCMD("greyscale off") },
-	{ MODKEY,                       XK_e,      spawn,          SHCMD("$TERMINAL -e vim +History") },
+	{ MODKEY,                       XK_e,      spawn,          SHCMD("emacs") },
 	{ MODKEY,                       XK_f,      spawn,          SHCMD("$TERMINAL -e ranger") },
 	{ MODKEY|ShiftMask,             XK_f,      spawn,          SHCMD("nemo") },
 	/* Workaround for launching on correct tag. */
