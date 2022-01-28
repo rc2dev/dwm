@@ -221,7 +221,6 @@ static Key keys[] = {
 	{ MODKEY,                       XK_c,      spawn,          SHCMD("dmenu_yt") },
 	{ MODKEY,                       XK_r,      spawn,          SHCMD("dmenu_url") },
 	{ ControlMask|Mod1Mask,         XK_v,      spawn,          SHCMD("clipmenu") },
-	{ MODKEY,                       XK_F1,     spawn,          SHCMD("dmenu_man") },
 	{ Mod1Mask|ControlMask,         XK_Delete, spawn,          SHCMD("dmenu_power") },
 
 	/* Audio and bluetooth */
