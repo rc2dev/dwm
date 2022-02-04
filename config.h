@@ -178,7 +178,6 @@ static Key keys[] = {
 	{ MODKEY,                       XK_z,      view,           {0} },
 	{ MODKEY|ShiftMask,             XK_z,      spawn,          SHCMD("flash-window") },
 	{ MODKEY,                       XK_q,      killclient,     {0} },
-	{ MODKEY|ShiftMask,             XK_q,      spawn,          SHCMD("xkill") },
 	{ MODKEY,                       XK_comma,  cyclelayout,    {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,  cyclelayout,    {.i = -1 } },
 	//{ MODKEY|ShiftMask,             XK_Return, setlayout,      {0} },
@@ -186,6 +185,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_s,      togglesticky,   {0} },
 	{ MODKEY,                       XK_0,      view,           {.ui = ~0 } },
 	{ MODKEY|ShiftMask,             XK_0,      tag,            {.ui = ~0 } },
+	{ MODKEY|Mod1Mask,              XK_w,      spawn,          SHCMD("qimgv $WALLPAPERS") },
 
 	/* Layouts */
 	{ MODKEY,                       XK_t,      setlayout,      {.v = &layouts[0]} }, // tiling
@@ -218,9 +218,6 @@ static Key keys[] = {
 	/* dmenu */
 	{ MODKEY,                       XK_d,      spawn,          SHCMD("dmenu_run++ -g 8 -l 6")  },
 	{ MODKEY|ShiftMask,             XK_d,      spawn,          SHCMD("j4-dmenu-desktop --dmenu='dmenu -g 8 -l 6'") },
-	{ MODKEY,                       XK_c,      spawn,          SHCMD("dmenu_yt") },
-	{ MODKEY,                       XK_r,      spawn,          SHCMD("dmenu_url") },
-	{ ControlMask|Mod1Mask,         XK_v,      spawn,          SHCMD("clipmenu") },
 	{ Mod1Mask|ControlMask,         XK_Delete, spawn,          SHCMD("dmenu_power") },
 
 	/* Audio and bluetooth */
@@ -231,35 +228,7 @@ static Key keys[] = {
 	{ 0,                            XF86XK_AudioNext, spawn,   {.v = player_next } },
 	{ 0,                            XF86XK_AudioPlay, spawn,   {.v = player_pause } },
 	{ 0,                            XF86XK_AudioStop, spawn,   {.v = player_stop } },
-	{ MODKEY,                       XK_v,      spawn,          SHCMD("pavucontrol") },
 	{ MODKEY,                       XK_b,      spawn,          SHCMD("blueman-manager") },
-
-	/* Printscreen */
-	{ 0,                            XK_Print,      spawn,      SHCMD("flameshot gui") },
-	{ ShiftMask,                    XK_Print,      spawn,      SHCMD("flameshot launcher") },
-
-	/* Applications */
-	{ 0,                            XF86XK_Calculator, spawn,  SHCMD("gnome-calculator") },
-	{ MODKEY,                       XK_a,      spawn,          SHCMD("chromium --profile-directory=\"Default\"") },
-	/* chromium's profile selector */
-	{ MODKEY|ControlMask,           XK_a,      spawn,          SHCMD("chromium --profile-directory=\"Guest Profile\"") },
-	{ MODKEY|ShiftMask,             XK_a,      spawn,          SHCMD("chromium --temp-profile") },
-	{ MODKEY|Mod1Mask,              XK_d,      spawn,          SHCMD("light-dark") },
-	{ MODKEY,                       XK_e,      spawn,          SHCMD("emacs") },
-	{ MODKEY,                       XK_f,      spawn,          SHCMD("$TERMINAL -e ranger") },
-	{ MODKEY|ShiftMask,             XK_f,      spawn,          SHCMD("nemo") },
-	/* Workaround for launching on correct tag. */
-	{ MODKEY,                       XK_m,      spawn,          SHCMD("$TERMINAL -n cmus -e cmus") },
-	{ MODKEY,                       XK_n,      spawn,          SHCMD("$TERMINAL -e notes name") },
-	{ MODKEY|ShiftMask,             XK_n,      spawn,          SHCMD("dmenu_notes") },
-	{ MODKEY,                       XK_o,      spawn,          SHCMD("$TERMINAL -e notes journal") },
-	{ MODKEY|ShiftMask,             XK_o,      spawn,          SHCMD("x-www-browser --new-window 'https://www.fatsecret.com.br/Diary.aspx?pa=fj'") },
-	{ MODKEY,                       XK_p,      spawn,          SHCMD("keepassxc") },
-	{ MODKEY,                       XK_x,      spawn,          SHCMD("$TERMINAL -e zsh -ic 'o'") },
-	{ MODKEY|ShiftMask,             XK_x,      spawn,          SHCMD("$TERMINAL -e ranger --cmd=fzf_select") },
-	{ MODKEY,                       XK_w,      spawn,          SHCMD("x-www-browser") },
-	{ MODKEY|ShiftMask,             XK_w,      spawn,          SHCMD("x-www-browser --incognito") },
-	{ MODKEY|Mod1Mask,              XK_w,      spawn,          SHCMD("qimgv $WALLPAPERS") },
 
 	TAGKEYS(                        XK_1,                      0)
 	TAGKEYS(                        XK_2,                      1)
@@ -282,7 +251,6 @@ static Button buttons[] = {
 	{ ClkWinTitle,          0,              Button2,        killclient,     {0} },
 	{ ClkWinTitle,          0,              Button3,        spawn,          SHCMD("nemo") },
 	{ ClkStatusText,        0,              Button1,        spawn,          SHCMD("zenity --calendar") },
-	{ ClkStatusText,        0,              Button2,        spawn,          SHCMD("pavucontrol") },
 	{ ClkStatusText,        0,              Button9,        spawn,          {.v = player_next } },
 	{ ClkStatusText,        0,              Button8,        spawn,          {.v = player_prev } },
 	{ ClkStatusText,        0,              Button3,        spawn,          {.v = player_pause } },
