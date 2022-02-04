@@ -1,5 +1,5 @@
-/* Author: Rafael Cavalcanti - rafaelc.org
- * Based on dwm original configuration */
+/* Author: Rafael Cavalcanti <https://rafaelc.org/dev>
+ * Based on dwm original configuration. */
 
 /* See LICENSE file for copyright and license details. */
 
