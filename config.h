@@ -129,7 +129,7 @@ static const Layout layouts[] = {
 
 /* commands */
 static char dmenumon[2] = "0"; /* [> component of dmenucmd, manipulated in spawn() <] */
-static const char *dmenucmd[] = { "dmenu_run++", "-m", dmenumon, NULL };
+static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, NULL };
 static const char *termcmd[] = { "/bin/sh", "-c", "$TERMINAL", NULL };
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "105x30",  NULL };
@@ -215,8 +215,9 @@ static Key keys[] = {
 	//{ MODKEY|Mod4Mask|ShiftMask,    XK_9,                    incrovgaps,     {.i = -1 } },
 
 	/* dmenu */
-	{ MODKEY,                       XK_d,                    spawn,          SHCMD("dmenu_run++ -g 8 -l 6")  },
-	{ MODKEY|ShiftMask,             XK_d,                    spawn,          SHCMD("j4-dmenu-desktop --dmenu='dmenu -g 8 -l 6'") },
+	/* This --dmenu option brings commands on PATH, as per j4-dmenu-desktop documentation. */
+	/* Not passing --no-generic shows both generic name and application name. */
+	{ MODKEY,                       XK_d,                    spawn,          SHCMD("j4-dmenu-desktop --no-generic --term=\"$TERMINAL\" --dmenu=\"(cat ; (stest -flx $(echo $PATH | tr : ' ') | sort -u)) | dmenu -l 6 -g 9\"") },
 	{ Mod1Mask|ControlMask,         XK_Delete,               spawn,          SHCMD("dmenu_power") },
 
 	/* Audio and bluetooth */
