@@ -59,6 +59,7 @@ static const Rule rules[] = {
 	{ "Nitrogen",              NULL,      NULL,                    0,         1,          0,        0,          0,         -1 },
 	{ "Pavucontrol",           NULL,      NULL,                    0,         1,          0,        0,          0,         -1 },
 	{ "Blueman-manager",       NULL,      NULL,                    0,         1,          0,        0,          0,         -1 },
+	{ "Blueberry.py",          NULL,      NULL,                    0,         1,          0,        0,          0,         -1 },
 	{ "Nm-connection-editor",  NULL,      NULL,                    0,         1,          0,        0,          0,         -1 },
 	{ "flameshot",             NULL,      NULL,                    0,         1,          0,        0,          0,         -1 },
 	{ "photoshop.exe",         NULL,      NULL,                    0,         1,          0,        0,          0,         -1 },
@@ -220,7 +221,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_d,                    spawn,          SHCMD("j4-dmenu-desktop --no-generic --term=\"$TERMINAL\" --dmenu=\"(cat ; (stest -flx $(echo $PATH | tr : ' ') | sort -u)) | dmenu -l 6 -g 9\"") },
 	{ Mod1Mask|ControlMask,         XK_Delete,               spawn,          SHCMD("dmenu_power") },
 
-	/* Audio and bluetooth */
+	/* Audio */
 	{ 0,                            XF86XK_AudioMute,        spawn,          {.v = mute } },
 	{ 0,                            XF86XK_AudioLowerVolume, spawn,          {.v = voldown } },
 	{ 0,                            XF86XK_AudioRaiseVolume, spawn,          {.v = volup } },
@@ -228,7 +229,6 @@ static Key keys[] = {
 	{ 0,                            XF86XK_AudioNext,        spawn,          {.v = player_next } },
 	{ 0,                            XF86XK_AudioPlay,        spawn,          {.v = player_pause } },
 	{ 0,                            XF86XK_AudioStop,        spawn,          {.v = player_stop } },
-	{ MODKEY,                       XK_b,                    spawn,          SHCMD("blueman-manager") },
 
 	TAGKEYS(                        XK_1,                    0)
 	TAGKEYS(                        XK_2,                    1)
