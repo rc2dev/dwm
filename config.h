@@ -25,6 +25,9 @@ static const unsigned int gappiv = 16;  /* vert inner gap between windows */
 static const unsigned int gappoh = 16;  /* horiz outer gap between windows and screen edge */
 static const unsigned int gappov = 16;  /* vert outer gap between windows and screen edge */
 static int smartgaps = 0;  /* 1 means no outer gap when there is only one window */
+#if !PERTAG_PATCH
+static int enablegaps = 1;
+#endif // PERTAG_PATCH
 static const int swallowfloating = 0;  /* 1 means swallow floating windows by default */
 static const unsigned int systraypinning = 0;  /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
 static const unsigned int systrayspacing = 4;  /* systray spacing */
