@@ -167,6 +167,7 @@ ResourcePref resources[] = {
 	{ "topbar",             INTEGER, &topbar },
 	{ "nmaster",            INTEGER, &nmaster },
 	{ "resizehints",        INTEGER, &resizehints },
+	{ "enablegaps",         INTEGER, &enablegaps },
 	{ "mfact",              FLOAT,   &mfact },
 };
 
