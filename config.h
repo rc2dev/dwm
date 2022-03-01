@@ -20,10 +20,10 @@ static int topbar = 1;   /* 0 means bottom bar */
 static char font[] = "monospace:size=10";
 static char dmenufont[] = "monospace:size=10";
 static const char *fonts[] = { font };
-static const unsigned int gappih = 16;  /* horiz inner gap between windows */
-static const unsigned int gappiv = 16;  /* vert inner gap between windows */
-static const unsigned int gappoh = 16;  /* horiz outer gap between windows and screen edge */
-static const unsigned int gappov = 16;  /* vert outer gap between windows and screen edge */
+static const unsigned int gappih = 48;  /* horiz inner gap between windows */
+static const unsigned int gappiv = 48;  /* vert inner gap between windows */
+static const unsigned int gappoh = 48;  /* horiz outer gap between windows and screen edge */
+static const unsigned int gappov = 48;  /* vert outer gap between windows and screen edge */
 static int smartgaps = 0;  /* 1 means no outer gap when there is only one window */
 #if !PERTAG_PATCH
 static int enablegaps = 1;
