@@ -86,6 +86,7 @@ static const Rule rules[] = {
 	{ "WebApp-WhatsApp1305",   NULL,      NULL,                    1 << 6,    0,          0,        0,           0,        -1 },
 	{ "St",                    "cmus",    NULL,                    1 << 7,    0,          0,        0,           0,        -1 },
 	{ "Spotify",               NULL,      NULL,                    1 << 7,    0,          0,        0,           0,        -1 },
+	{ NULL,                    "de.haeckerfelix.Shortwave", NULL,  1 << 7,    0,          0,        0,           0,        -1 },
 	{ "St",                    "sys",     NULL,                    1 << 8,    0,          0,        0,           0,        -1 },
 };
 
