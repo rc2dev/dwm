@@ -184,9 +184,9 @@ static Key keys[] = {
 	{ MODKEY,                       XK_bracketleft,          incnmaster,     {.i = -1 } },
 	{ MODKEY,                       XK_h,                    setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_l,                    setmfact,       {.f = +0.05} },
-	{ MODKEY,                       XK_space,                zoom,           {0} },
-	{ MODKEY,                       XK_z,                    view,           {0} },
-	{ MODKEY|ShiftMask,             XK_z,                    spawn,          SHCMD("flash-window") },
+	{ Mod1Mask,                     XK_apostrophe,           zoom,           {0} },
+	{ MODKEY,                       XK_apostrophe,           view,           {0} },
+	{ MODKEY,                       XK_z,                    spawn,          SHCMD("flash-window") },
 	{ MODKEY,                       XK_q,                    killclient,     {0} },
 	{ MODKEY,                       XK_comma,                cyclelayout,    {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,                cyclelayout,    {.i = -1 } },
@@ -194,7 +194,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_s,                    togglesticky,   {0} },
 	{ MODKEY,                       XK_0,                    view,           {.ui = ~0 } },
 	{ MODKEY|ShiftMask,             XK_0,                    tag,            {.ui = ~0 } },
-	{ MODKEY|Mod1Mask,              XK_w,                    spawn,          SHCMD("qimgv $WALLPAPERS") },
+	{ MODKEY|ControlMask,           XK_w,                    spawn,          SHCMD("qimgv $WALLPAPERS") },
 
 	/* Layouts */
 	{ MODKEY,                       XK_t,                    setlayout,      {.v = &layouts[0]} }, // tiling
