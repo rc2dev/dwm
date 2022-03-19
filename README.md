@@ -29,7 +29,7 @@ dwm is an extremely fast, small, and dynamic window manager for X.
 - Complement to `sticky` patch: Ignore sticky flag if fullscreen.
   Sticking a full screen window is not useful and prevents from switching tags (see commit e04a608).
 - Add class to systray. This allows adding rules for it on compton.
-- Key and mouse binds, window rules, aesthetics.
+- Key and mouse bindings, window rules, aesthetics.
 
 ## Requirements
 
