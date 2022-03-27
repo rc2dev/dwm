@@ -80,10 +80,13 @@ static const Rule rules[] = {
 	{ "Brave-browser",         NULL,      NULL,                    0,         0,          0,        0,          1,         -1 },
 
 	/* Tags */
+	{ "Brave-browser",         NULL,      NULL,                    1 << 0,    0,          0,        0,           0,        -1 },
+	{ "Chromium-browser",      NULL,      NULL,                    1 << 0,    0,          0,        0,           0,        -1 },
 	{ "Virt-manager",          NULL,      NULL,                    1 << 5,    0,          0,        0,           0,        -1 },
 	{ "Virt-viewer",           NULL,      NULL,                    1 << 5,    0,          0,        0,           0,        -1 },
 	{ "TelegramDesktop",       NULL,      NULL,                    1 << 6,    0,          0,        0,           0,        -1 },
 	{ "WebApp-WhatsApp1305",   NULL,      NULL,                    1 << 6,    0,          0,        0,           0,        -1 },
+	{ "Thunderbird",           NULL,      NULL,                    1 << 6,    0,          0,        0,           0,        -1 },
 	{ "St",                    "cmus",    NULL,                    1 << 7,    0,          0,        0,           0,        -1 },
 	{ "Spotify",               NULL,      NULL,                    1 << 7,    0,          0,        0,           0,        -1 },
 	{ NULL,                    "de.haeckerfelix.Shortwave", NULL,  1 << 7,    0,          0,        0,           0,        -1 },
