@@ -197,7 +197,6 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_s,                    togglesticky,   {0} },
 	{ MODKEY,                       XK_0,                    view,           {.ui = ~0 } },
 	{ MODKEY|ShiftMask,             XK_0,                    tag,            {.ui = ~0 } },
-	{ MODKEY|ControlMask,           XK_w,                    spawn,          SHCMD("qimgv $WALLPAPERS") },
 
 	/* Layouts */
 	{ MODKEY,                       XK_t,                    setlayout,      {.v = &layouts[0]} }, // tiling
