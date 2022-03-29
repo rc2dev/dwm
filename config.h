@@ -225,7 +225,7 @@ static Key keys[] = {
 	/* dmenu */
 	/* This --dmenu option brings commands on PATH, as per j4-dmenu-desktop documentation. */
 	/* Not passing --no-generic shows both generic name and application name. */
-	{ MODKEY,                       XK_d,                    spawn,          SHCMD("j4-dmenu-desktop --no-generic --term=\"$TERMINAL\" --dmenu=\"(cat ; (stest -flx $(echo $PATH | tr : ' ') | sort -u)) | dmenu -l 6 -g 9\"") },
+	{ MODKEY,                       XK_d,                    spawn,          SHCMD("j4-dmenu-desktop --no-generic --term=\"$TERMINAL\" --dmenu=\"(cat ; (stest -flx $(echo $PATH | tr : ' ') | sort -u)) | dmenu -l 6 -g 8\"") },
 	{ Mod1Mask|ControlMask,         XK_Delete,               spawn,          SHCMD("dmenu_power") },
 
 	/* Audio */
