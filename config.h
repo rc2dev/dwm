@@ -254,8 +254,8 @@ static Button buttons[] = {
 	/* click                event mask      button          function        argument */
 	{ ClkLtSymbol,          0,              Button1,        setlayout,      {0} },
 	{ ClkLtSymbol,          0,              Button3,        setlayout,      {.v = &layouts[1]} },
+	{ ClkLtSymbol,          0,              Button2,        killclient,     {0} },
 	{ ClkWinTitle,          0,              Button1,        zoom,           {0} },
-	{ ClkWinTitle,          0,              Button2,        killclient,     {0} },
 	{ ClkWinTitle,          0,              Button3,        spawn,          SHCMD("nemo") },
 	{ ClkWinTitle,          0,              Button4,        focusstack,     {.i = INC(-1) } },
 	{ ClkWinTitle,          0,              Button5,        focusstack,     {.i = INC(+1) } },
