@@ -200,7 +200,7 @@ static Key keys[] = {
 
 	/* Layouts */
 	{ MODKEY,                       XK_t,                    setlayout,      {.v = &layouts[0]} }, // tiling
-	{ MODKEY|ShiftMask,             XK_t,                    setlayout,      {.v = &layouts[13]} }, // floating
+	{ MODKEY|ShiftMask,             XK_t,                    setlayout,      {.v = &layouts[5]} }, // bstack
 	{ MODKEY,                       XK_m,                    setlayout,      {.v = &layouts[1]} }, // monocle
 	{ MODKEY|ShiftMask,             XK_m,                    setlayout,      {.v = &layouts[4]} }, // deck
 
