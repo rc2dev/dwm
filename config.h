@@ -77,10 +77,9 @@ static const Rule rules[] = {
 	{ "St",                    NULL,      NULL,                    0,         0,          0,        1,          0,         -1 },
 	{ NULL,                    NULL,      "Event Tester",          0,         0,          0,        0,          1,         -1 },
 	/* VIM shouldn't be swallowed when opening links. */
-	{ "Brave-browser",         NULL,      NULL,                    0,         0,          0,        0,          1,         -1 },
+	{ "Brave-browser",         NULL,      NULL,                    1 << 0,    0,          0,        0,          1,         -1 },
 
 	/* Tags */
-	{ "Brave-browser",         NULL,      NULL,                    1 << 0,    0,          0,        0,           0,        -1 },
 	{ "Chromium-browser",      NULL,      NULL,                    1 << 0,    0,          0,        0,           0,        -1 },
 	{ "Virt-manager",          NULL,      NULL,                    1 << 5,    0,          0,        0,           0,        -1 },
 	{ "Virt-viewer",           NULL,      NULL,                    1 << 5,    0,          0,        0,           0,        -1 },
