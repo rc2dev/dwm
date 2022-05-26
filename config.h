@@ -180,7 +180,7 @@ static Key keys[] = {
 	STACKKEYS(MODKEY|ShiftMask,                              push)
 	{ MODKEY,                       XK_Return,               spawn,          {.v = termcmd } },
 	{ MODKEY|ShiftMask,             XK_Return,               togglescratch,  {.v = scratchpadcmd } },
-	{ MODKEY,                       XK_Escape,               spawn,          SHCMD("slock") },
+	{ MODKEY,                       XK_BackSpace,            spawn,          SHCMD("slock") },
 	{ MODKEY|ShiftMask,             XK_b,                    togglebar,      {0} },
 	{ MODKEY,                       XK_bracketright,         incnmaster,     {.i = +1 } },
 	{ MODKEY,                       XK_bracketleft,          incnmaster,     {.i = -1 } },
