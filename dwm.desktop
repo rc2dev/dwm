@@ -1,0 +1,8 @@
+[Desktop Entry]
+Name=dwm
+Comment=This session logs you into dwm
+Exec=dwm
+TryExec=/usr/local/bin/dwm
+Icon=
+Type=Application
+

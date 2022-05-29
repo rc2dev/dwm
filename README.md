@@ -30,6 +30,7 @@ dwm is an extremely fast, small, and dynamic window manager for X.
   Sticking a full screen window is not useful and prevents from switching tags (see commit e04a608).
 - Add class to systray. This allows adding rules for it on compton.
 - Key and mouse bindings, window rules, aesthetics.
+- Show up on display managers, with `dwm.desktop`.
 
 ## Requirements
 

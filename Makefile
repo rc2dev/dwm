@@ -34,6 +34,10 @@ install: all
 	mkdir -p ${DESTDIR}${MANPREFIX}/man1
 	sed "s/VERSION/${VERSION}/g" < dwm.1 > ${DESTDIR}${MANPREFIX}/man1/dwm.1
 	chmod 644 ${DESTDIR}${MANPREFIX}/man1/dwm.1
+	# Hardcode /usr (don't use PREFIX), as /usr/local/share/xsessions is not searched.
+	@mkdir -p ${DESTDIR}/usr/share/xsessions
+	@cp dwm.desktop ${DESTDIR}/usr/share/xsessions/dwm.desktop
+	@chmod 644 ${DESTDIR}/usr/share/xsessions/dwm.desktop
 
 uninstall:
 	rm -f ${DESTDIR}${PREFIX}/bin/dwm\
