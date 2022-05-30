@@ -141,7 +141,6 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* [> component of dmenucmd, manipulated in spawn() <] */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, NULL };
-static const char *termcmd[] = { "/bin/sh", "-c", "$TERMINAL", NULL };
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "105x30",  NULL };
 static const char *volup[] = { "/bin/sh", "-c",  "volume up", NULL };
@@ -178,7 +177,6 @@ static Key keys[] = {
 	/* modifier                     key                      function        argument */
 	STACKKEYS(MODKEY,                                        focus)
 	STACKKEYS(MODKEY|ShiftMask,                              push)
-	{ MODKEY,                       XK_Return,               spawn,          {.v = termcmd } },
 	{ MODKEY|ShiftMask,             XK_Return,               togglescratch,  {.v = scratchpadcmd } },
 	{ MODKEY,                       XK_BackSpace,            spawn,          SHCMD("slock") },
 	{ MODKEY|ShiftMask,             XK_b,                    togglebar,      {0} },
