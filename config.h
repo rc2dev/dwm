@@ -170,6 +170,7 @@ ResourcePref resources[] = {
 	{ "nmaster",            INTEGER, &nmaster },
 	{ "resizehints",        INTEGER, &resizehints },
 	{ "enablegaps",         INTEGER, &enablegaps },
+	{ "smartgaps",          INTEGER, &smartgaps },
 	{ "mfact",              FLOAT,   &mfact },
 };
 
