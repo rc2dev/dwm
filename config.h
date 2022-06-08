@@ -189,7 +189,6 @@ static Key keys[] = {
 	{ MODKEY,                       XK_l,                    setmfact,       {.f = +0.05} },
 	{ Mod1Mask,                     XK_apostrophe,           zoom,           {0} },
 	{ MODKEY,                       XK_apostrophe,           view,           {0} },
-	{ MODKEY,                       XK_z,                    spawn,          SHCMD("flash-window") },
 	{ MODKEY,                       XK_q,                    killclient,     {0} },
 	{ MODKEY,                       XK_comma,                cyclelayout,    {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_comma,                cyclelayout,    {.i = -1 } },
