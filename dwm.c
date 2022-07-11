@@ -1335,8 +1335,18 @@ manage(Window w, XWindowAttributes *wa)
 	updatewindowtype(c);
 	updatesizehints(c);
 	updatewmhints(c);
-	c->x = c->mon->mx + (c->mon->mw - WIDTH(c)) / 2;
-	c->y = c->mon->my + (c->mon->mh - HEIGHT(c)) / 2;
+
+	/* Center floating window unless it's sticky (like MPV).
+	 * In this case, place it on the bottom right. */
+	if (c->issticky) {
+		int bottom_margin = c->mon->topbar ? 0 : c->mon->by;
+		c->x = c->mon->mx + (c->mon->mw - WIDTH(c));
+		c->y = c->mon->my + (c->mon->mh - HEIGHT(c) + bottom_margin);
+	} else {
+		c->x = c->mon->mx + (c->mon->mw - WIDTH(c)) / 2;
+		c->y = c->mon->my + (c->mon->mh - HEIGHT(c)) / 2;
+	}
+
 	XSelectInput(dpy, w, EnterWindowMask|FocusChangeMask|PropertyChangeMask|StructureNotifyMask);
 	grabbuttons(c, 0);
 	if (!c->isfloating)

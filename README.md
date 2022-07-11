@@ -26,8 +26,8 @@ dwm is an extremely fast, small, and dynamic window manager for X.
 - Complement to `vanitygaps` patch: Add gaps to monocle, respecting smartgaps.
 - Complement to `vanitygaps` patch: Add `vanitygaps.c` to `Makefile`, so changes are detected.
 - Complement to `noborder` patch: Draw borders if gaps are enabled.
-- Complement to `sticky` patch: Ignore sticky flag if fullscreen.
-  Sticking a full screen window is not useful and prevents from switching tags (see commit e04a608).
+- Complement to `sticky` patch: Ignore sticky flag if fullscreen. Sticking a full screen window is not useful and prevents from switching tags (see commit e04a608).
+- Complement to `center` patch: If the floating window is sticky, place it on the bottom right instead of centering it (and take the bar into account). This allows me to watch videos on all my tags unobtrusively.
 - Add class to systray. This allows adding rules for it on compton.
 - Key and mouse bindings, window rules, aesthetics.
 - Show up on display managers, with `dwm.desktop`.
