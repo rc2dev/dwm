@@ -9,8 +9,9 @@ dwm is an extremely fast, small, and dynamic window manager for X.
 - alwayscenter
 - bar height
 - cyclelayouts
-- ewmhtags
+- ewmhtags [1]
 - fixborders
+- focusonnetactive [1]
 - noborder
 - pertag
 - restartsig
@@ -20,6 +21,8 @@ dwm is an extremely fast, small, and dynamic window manager for X.
 - systray
 - vanitygaps
 - xresources
+
+1: These patches together allow the use of window switchers.
 
 ## My own patches
 
