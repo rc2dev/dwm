@@ -19,6 +19,7 @@ dwm is an extremely fast, small, and dynamic window manager for X.
 - sticky
 - swallow
 - systray
+- tapresize
 - vanitygaps
 - xresources
 
