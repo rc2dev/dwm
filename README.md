@@ -9,9 +9,9 @@ dwm is an extremely fast, small, and dynamic window manager for X.
 - alwayscenter
 - bar height
 - cyclelayouts
-- ewmhtags [1]
+- ewmhtags $^1$
 - fixborders
-- focusonnetactive [1]
+- focusonnetactive $^1$
 - noborder
 - pertag
 - restartsig
