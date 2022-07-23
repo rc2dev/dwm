@@ -190,8 +190,8 @@ static Key keys[] = {
 	{ MODKEY,                       XK_space,                zoom,           {0} },
 	{ MODKEY,                       XK_apostrophe,           view,           {0} },
 	{ MODKEY,                       XK_q,                    killclient,     {0} },
-	{ MODKEY,                       XK_Tab,                cyclelayout,    {.i = +1 } },
-	{ MODKEY|ShiftMask,             XK_Tab,                cyclelayout,    {.i = -1 } },
+	{ MODKEY,                       XK_Tab,                  cyclelayout,    {.i = +1 } },
+	{ MODKEY|ShiftMask,             XK_Tab,                  cyclelayout,    {.i = -1 } },
 	{ MODKEY|ShiftMask,             XK_space,                togglefloating, {0} },
 	{ MODKEY|ShiftMask,             XK_s,                    togglesticky,   {0} },
 	{ MODKEY,                       XK_0,                    view,           {.ui = ~0 } },
@@ -238,9 +238,9 @@ static Key keys[] = {
 
 	/* For x220. */
 	/* Brightness: Needed after bios update. */
-	{ 0,                            XF86XK_MonBrightnessUp,        spawn,          SHCMD("xbacklight -time 0 -inc 7") },
-	{ 0,                            XF86XK_MonBrightnessDown,        spawn,          SHCMD("xbacklight -time 0 -dec 7") },
-	{ 0,                            XF86XK_AudioMicMute,        spawn,          SHCMD("pactl -- set-source-mute 1 toggle") },
+	{ 0,                            XF86XK_MonBrightnessUp,   spawn,         SHCMD("xbacklight -time 0 -inc 7") },
+	{ 0,                            XF86XK_MonBrightnessDown, spawn,         SHCMD("xbacklight -time 0 -dec 7") },
+	{ 0,                            XF86XK_AudioMicMute,      spawn,         SHCMD("pactl -- set-source-mute 1 toggle") },
 
 	TAGKEYS(                        XK_1,                    0)
 	TAGKEYS(                        XK_2,                    1)
