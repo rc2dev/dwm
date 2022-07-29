@@ -57,6 +57,19 @@ static const Rule rules[] = {
 	 *	WM_NAME(STRING) = title
 	 */
 	/* class                  instance    title                    tags mask  isfloating  issticky  isterminal  noswallow  monitor */
+	/* Tags */
+	{ "Brave-browser",         NULL,      NULL,                    1 << 0,    0,          0,        0,          0,         -1 },
+	{ "firefox",               NULL,      NULL,                    1 << 0,    0,          0,        0,          0,         -1 },
+	{ "Virt-manager",          NULL,      NULL,                    1 << 5,    0,          0,        0,          0,         -1 },
+	{ "Virt-viewer",           NULL,      NULL,                    1 << 5,    0,          0,        0,          0,         -1 },
+	{ "org.remmina.Remmina",   NULL,      NULL,                    1 << 5,    0,          0,        0,          0,         -1 },
+	{ "TelegramDesktop",       NULL,      NULL,                    1 << 6,    0,          0,        0,          0,         -1 },
+	{ "WebApp-WhatsApp",       NULL,      NULL,                    1 << 6,    0,          0,        0,          0,         -1 },
+	{ "Thunderbird",           NULL,      NULL,                    1 << 6,    0,          0,        0,          0,         -1 },
+	{ "St",                    "cmus",    NULL,                    1 << 7,    0,          0,        0,          0,         -1 },
+	{ "Spotify",               NULL,      NULL,                    1 << 7,    0,          0,        0,          0,         -1 },
+	{ "St",                    "sys",     NULL,                    1 << 8,    0,          0,        0,          0,         -1 },
+
 	/* Floating */
 	{ "Gnome-calculator",      NULL,      NULL,                    0,         1,          0,        0,          0,         -1 },
 	{ "Nitrogen",              NULL,      NULL,                    0,         1,          0,        0,          0,         -1 },
@@ -70,24 +83,12 @@ static const Rule rules[] = {
 	/* Floating and sticky */
 	{ "mpv",                   NULL,      NULL,                    0,         1,          1,        0,          0,         -1 },
 	{ NULL,                    NULL,      "Picture in picture",    0,         1,          1,        0,          0,         -1 },
+	{ NULL,                    NULL,      "Picture-in-Picture",    0,         1,          1,        0,          0,         -1 },
 
 	/* Swallow */
 	{ "Alacritty",             NULL,      NULL,                    0,         0,          0,        1,          0,         -1 },
 	{ "St",                    NULL,      NULL,                    0,         0,          0,        1,          0,         -1 },
 	{ NULL,                    NULL,      "Event Tester",          0,         0,          0,        0,          1,         -1 },
-
-	/* Tags */
-	{ "Brave-browser",         NULL,      NULL,                    1 << 0,    0,          0,        0,          0,         -1 },
-	{ "firefox",               NULL,      NULL,                    1 << 0,    0,          0,        0,          0,         -1 },
-	{ "Virt-manager",          NULL,      NULL,                    1 << 5,    0,          0,        0,          0,         -1 },
-	{ "Virt-viewer",           NULL,      NULL,                    1 << 5,    0,          0,        0,          0,         -1 },
-	{ "org.remmina.Remmina",   NULL,      NULL,                    1 << 5,    0,          0,        0,          0,         -1 },
-	{ "TelegramDesktop",       NULL,      NULL,                    1 << 6,    0,          0,        0,          0,         -1 },
-	{ "WebApp-WhatsApp",       NULL,      NULL,                    1 << 6,    0,          0,        0,          0,         -1 },
-	{ "Thunderbird",           NULL,      NULL,                    1 << 6,    0,          0,        0,          0,         -1 },
-	{ "St",                    "cmus",    NULL,                    1 << 7,    0,          0,        0,          0,         -1 },
-	{ "Spotify",               NULL,      NULL,                    1 << 7,    0,          0,        0,          0,         -1 },
-	{ "St",                    "sys",     NULL,                    1 << 8,    0,          0,        0,          0,         -1 },
 };
 
 /* layout(s) */
