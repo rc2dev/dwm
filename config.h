@@ -78,6 +78,7 @@ static const Rule rules[] = {
 
 	/* Tags */
 	{ "Brave-browser",         NULL,      NULL,                    1 << 0,    0,          0,        0,          0,         -1 },
+	{ "firefox",               NULL,      NULL,                    1 << 0,    0,          0,        0,          0,         -1 },
 	{ "Virt-manager",          NULL,      NULL,                    1 << 5,    0,          0,        0,          0,         -1 },
 	{ "Virt-viewer",           NULL,      NULL,                    1 << 5,    0,          0,        0,          0,         -1 },
 	{ "org.remmina.Remmina",   NULL,      NULL,                    1 << 5,    0,          0,        0,          0,         -1 },
