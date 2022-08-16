@@ -71,7 +71,7 @@ static const Rule rules[] = {
 	{ "St",                    "sys",     NULL,                    1 << 8,    0,          0,        0,          0,         -1 },
 
 	/* Floating */
-	{ "Gnome-calculator",      NULL,      NULL,                    0,         1,          0,        0,          0,         -1 },
+	{ "gnome-calculator",      NULL,      NULL,                    0,         1,          0,        0,          0,         -1 },
 	{ "Nitrogen",              NULL,      NULL,                    0,         1,          0,        0,          0,         -1 },
 	{ "Pavucontrol",           NULL,      NULL,                    0,         1,          0,        0,          0,         -1 },
 	{ "Blueman-manager",       NULL,      NULL,                    0,         1,          0,        0,          0,         -1 },
