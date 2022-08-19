@@ -54,10 +54,10 @@ static const char *tags[] = {
 	"",
 	"",
 	"",
-	"",
 	"",
 	"",
 	"",
+	"",
 	""
 };
 
@@ -70,14 +70,15 @@ static const Rule rules[] = {
 	/* Tags */
 	{ "Brave-browser",         NULL,      NULL,                    1 << 0,    0,          0,        0,          0,         -1 },
 	{ "firefox",               NULL,      NULL,                    1 << 0,    0,          0,        0,          0,         -1 },
-	{ "Virt-manager",          NULL,      NULL,                    1 << 5,    0,          0,        0,          0,         -1 },
-	{ "Virt-viewer",           NULL,      NULL,                    1 << 5,    0,          0,        0,          0,         -1 },
-	{ "org.remmina.Remmina",   NULL,      NULL,                    1 << 5,    0,          0,        0,          0,         -1 },
-	{ "TelegramDesktop",       NULL,      NULL,                    1 << 6,    0,          0,        0,          0,         -1 },
-	{ "WebApp-WhatsApp",       NULL,      NULL,                    1 << 6,    0,          0,        0,          0,         -1 },
-	{ "Thunderbird",           NULL,      NULL,                    1 << 6,    0,          0,        0,          0,         -1 },
-	{ "St",                    "cmus",    NULL,                    1 << 7,    0,          0,        0,          0,         -1 },
-	{ "Spotify",               NULL,      NULL,                    1 << 7,    0,          0,        0,          0,         -1 },
+	{ "Virt-manager",          NULL,      NULL,                    1 << 4,    0,          0,        0,          0,         -1 },
+	{ "Virt-viewer",           NULL,      NULL,                    1 << 4,    0,          0,        0,          0,         -1 },
+	{ "org.remmina.Remmina",   NULL,      NULL,                    1 << 4,    0,          0,        0,          0,         -1 },
+	{ "TelegramDesktop",       NULL,      NULL,                    1 << 5,    0,          0,        0,          0,         -1 },
+	{ "WebApp-WhatsApp",       NULL,      NULL,                    1 << 5,    0,          0,        0,          0,         -1 },
+	{ "Thunderbird",           NULL,      NULL,                    1 << 5,    0,          0,        0,          0,         -1 },
+	{ "St",                    "cmus",    NULL,                    1 << 6,    0,          0,        0,          0,         -1 },
+	{ "Spotify",               NULL,      NULL,                    1 << 6,    0,          0,        0,          0,         -1 },
+	{ "St",                    "plan",    NULL,                    1 << 7,    0,          0,        0,          0,         -1 },
 	{ "St",                    "sys",     NULL,                    1 << 8,    0,          0,        0,          0,         -1 },
 
 	/* Floating */
