@@ -69,6 +69,7 @@ static const Rule rules[] = {
 	/* class                  instance    title                    tags mask  isfloating  issticky  isterminal  noswallow  monitor */
 	/* Tags */
 	{ "Brave-browser",         NULL,      NULL,                    1 << 0,    0,          0,        0,          0,         -1 },
+	{ "Chromium-freeworld",    NULL,      NULL,                    1 << 0,    0,          0,        0,          0,         -1 },
 	{ "firefox",               NULL,      NULL,                    1 << 0,    0,          0,        0,          0,         -1 },
 	{ "Virt-manager",          NULL,      NULL,                    1 << 4,    0,          0,        0,          0,         -1 },
 	{ "Virt-viewer",           NULL,      NULL,                    1 << 4,    0,          0,        0,          0,         -1 },
