@@ -73,6 +73,7 @@ static const Rule rules[] = {
 	{ "firefox",               NULL,      NULL,                    1 << 0,    0,          0,        0,          0,         -1 },
 	{ "Virt-manager",          NULL,      NULL,                    1 << 4,    0,          0,        0,          0,         -1 },
 	{ "Virt-viewer",           NULL,      NULL,                    1 << 4,    0,          0,        0,          0,         -1 },
+	{ "Zenity",                NULL,      "virt-viewer",           1 << 4,    0,          0,        0,          0,         -1 },
 	{ "org.remmina.Remmina",   NULL,      NULL,                    1 << 4,    0,          0,        0,          0,         -1 },
 	{ "TelegramDesktop",       NULL,      NULL,                    1 << 5,    0,          0,        0,          0,         -1 },
 	{ "WebApp-WhatsApp",       NULL,      NULL,                    1 << 5,    0,          0,        0,          0,         -1 },
