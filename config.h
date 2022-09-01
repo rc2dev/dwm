@@ -77,7 +77,7 @@ static const Rule rules[] = {
 	{ "org.remmina.Remmina",   NULL,      NULL,                    1 << 4,    0,          0,        0,          0,         -1 },
 	{ "TelegramDesktop",       NULL,      NULL,                    1 << 5,    0,          0,        0,          0,         -1 },
 	{ "WebApp-WhatsApp",       NULL,      NULL,                    1 << 5,    0,          0,        0,          0,         -1 },
-	{ "Thunderbird",           NULL,      NULL,                    1 << 5,    0,          0,        0,          0,         -1 },
+	{ "thunderbird",           NULL,      NULL,                    1 << 5,    0,          0,        0,          0,         -1 },
 	{ "St",                    "cmus",    NULL,                    1 << 6,    0,          0,        0,          0,         -1 },
 	{ "Spotify",               NULL,      NULL,                    1 << 6,    0,          0,        0,          0,         -1 },
 	{ "St",                    "plan",    NULL,                    1 << 7,    0,          0,        0,          0,         -1 },
