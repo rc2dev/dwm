@@ -71,7 +71,7 @@ static const Rule rules[] = {
 	{ "Brave-browser",         NULL,      NULL,                    1 << 1,    0,          0,        0,          0,         -1 },
 	{ "Chromium-freeworld",    NULL,      NULL,                    1 << 1,    0,          0,        0,          0,         -1 },
 	{ "firefox",               NULL,      NULL,                    1 << 1,    0,          0,        0,          0,         -1 },
-	{ NULL,                    "libreoffice", NULL,                1 << 2,    0,          0,        0,          0,         -1 },
+	{ "Soffice",               NULL,      NULL,                    1 << 2,    0,          0,        0,          0,         -1 },
 	{ "calibre",               NULL,      NULL,                    1 << 2,    0,          0,        0,          0,         -1 },
 	{ "Virt-manager",          NULL,      NULL,                    1 << 3,    0,          0,        0,          0,         -1 },
 	{ "Virt-viewer",           NULL,      NULL,                    1 << 3,    0,          0,        0,          0,         -1 },
@@ -82,6 +82,7 @@ static const Rule rules[] = {
 	{ "St",                    "cmus",    NULL,                    1 << 5,    0,          0,        0,          0,         -1 },
 	{ "Spotify",               NULL,      NULL,                    1 << 5,    0,          0,        0,          0,         -1 },
 	{ "thunderbird",           NULL,      NULL,                    1 << 6,    0,          0,        0,          0,         -1 },
+	{ "Geary",                 NULL,      NULL,                    1 << 6,    0,          0,        0,          0,         -1 },
 	{ "St",                    "plan",    NULL,                    1 << 7,    0,          0,        0,          0,         -1 },
 	{ "St",                    "sys",     NULL,                    1 << 8,    0,          0,        0,          0,         -1 },
 
