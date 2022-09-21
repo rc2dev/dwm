@@ -255,8 +255,8 @@ static Key keys[] = {
 
 	/* For x220. */
 	/* Brightness: Needed after bios update. */
-	{ 0,                            XF86XK_MonBrightnessUp,   spawn,         SHCMD("xbacklight -time 0 -inc 7") },
-	{ 0,                            XF86XK_MonBrightnessDown, spawn,         SHCMD("xbacklight -time 0 -dec 7") },
+	{ 0,                            XF86XK_MonBrightnessUp,   spawn,         SHCMD("brightness -time 0 -inc 7") },
+	{ 0,                            XF86XK_MonBrightnessDown, spawn,         SHCMD("brightness -time 0 -dec 7") },
 	{ 0,                            XF86XK_AudioMicMute,      spawn,         SHCMD("pactl -- set-source-mute 1 toggle") },
 
 	TAGKEYS(                        XK_1,                    0)
