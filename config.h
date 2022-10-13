@@ -121,12 +121,12 @@ static const int scrollsensetivity = 30; /* 1 means resize window by 1 pixel for
 
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "[]=",      tile },    /* first entry is default */
-	{ "[M]",      monocle },
+	{ "T",        tile },    /* first entry is default */
+	{ "M",        monocle },
 	{ "[@]",      spiral },
 	{ "[\\]",     dwindle },
-	{ "H[]",      deck },
-	{ "TTT",      bstack },
+	{ "D",        deck },
+	{ "B",        bstack },
 	{ "===",      bstackhoriz },
 	{ "HHH",      grid },
 	{ "###",      nrowgrid },
@@ -134,7 +134,7 @@ static const Layout layouts[] = {
 	{ ":::",      gaplessgrid },
 	{ "|M|",      centeredmaster },
 	{ ">M>",      centeredfloatingmaster },
-	{ "><>",      NULL },    /* no layout function means floating behavior */
+	{ "f",        NULL },    /* no layout function means floating behavior */
 	{ NULL,       NULL },
 };
 

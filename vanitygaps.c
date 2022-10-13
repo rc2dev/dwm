@@ -449,7 +449,7 @@ deck(Monitor *m)
 	getfacts(m, mh, sh, &mfacts, &sfacts, &mrest, &srest);
 
 	if (n - m->nmaster > 0) /* override layout symbol */
-		snprintf(m->ltsymbol, sizeof m->ltsymbol, "D %d", n - m->nmaster);
+		snprintf(m->ltsymbol, sizeof m->ltsymbol, "D%d", n - m->nmaster);
 
 	for (i = 0, c = nexttiled(m->clients); c; c = nexttiled(c->next), i++)
 		if (i < m->nmaster) {
@@ -823,7 +823,7 @@ monocle(Monitor *m)
 		if (ISVISIBLE(c))
 			n++;
 	if (n > 0) /* override layout symbol */
-		snprintf(m->ltsymbol, sizeof m->ltsymbol, "[%d]", n);
+		snprintf(m->ltsymbol, sizeof m->ltsymbol, "M%d", n);
 	for (c = nexttiled(m->clients); c; c = nexttiled(c->next))
 		resize(c, mx, my, mw - (2*c->bw), mh - (2*c->bw), 0);
 }
