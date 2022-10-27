@@ -201,6 +201,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_BackSpace,            spawn,          SHCMD("slock") },
 	{ NULL,                         XF86XK_ScreenSaver,      spawn,          SHCMD("slock") }, /* For x220. */
 	{ MODKEY|ShiftMask,             XK_b,                    togglebar,      {0} },
+	{ MODKEY|ShiftMask,             XK_c,                    spawn,          SHCMD("zenity --calendar") },
 	{ MODKEY,                       XK_i,                    incnmaster,     {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_i,                    incnmaster,     {.i = -1 } },
 	{ MODKEY,                       XK_g,                    spawn,          SHCMD("greyscale") },
