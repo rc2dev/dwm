@@ -95,6 +95,7 @@ static const Rule rules[] = {
 	{ "Blueberry.py",          NULL,      NULL,                    0,         1,          0,        0,          0,         -1 },
 	{ "Nm-connection-editor",  NULL,      NULL,                    0,         1,          0,        0,          0,         -1 },
 	{ "flameshot",             NULL,      NULL,                    0,         1,          0,        0,          0,         -1 },
+	{ NULL,                    "Pilorama", NULL,                   0,         1,          0,        0,          0,         -1 },
 	{ "photoshop.exe",         NULL,      NULL,                    0,         1,          0,        0,          0,         -1 },
 
 	/* Floating and sticky */
