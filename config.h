@@ -71,7 +71,6 @@ static const Rule rules[] = {
 	{ "Brave-browser",         NULL,      NULL,                    1 << 1,    0,          0,        0,          0,         -1 },
 	{ "Chromium-freeworld",    NULL,      NULL,                    1 << 1,    0,          0,        0,          0,         -1 },
 	{ "firefox",               NULL,      NULL,                    1 << 1,    0,          0,        0,          0,         -1 },
-	{ "Soffice",               NULL,      NULL,                    1 << 2,    0,          0,        0,          0,         -1 },
 	{ "calibre",               NULL,      NULL,                    1 << 2,    0,          0,        0,          0,         -1 },
 	{ "Code",                  NULL,      NULL,                    1 << 2,    0,          0,        0,          0,         -1 },
 	{ "Virt-manager",          NULL,      NULL,                    1 << 3,    0,          0,        0,          0,         -1 },
