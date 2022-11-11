@@ -203,7 +203,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_c,                    spawn,          SHCMD("zenity --calendar") },
 	{ MODKEY,                       XK_i,                    incnmaster,     {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_i,                    incnmaster,     {.i = -1 } },
-	{ MODKEY,                       XK_g,                    spawn,          SHCMD("greyscale") },
+	{ MODKEY|ShiftMask,             XK_g,                    spawn,          SHCMD("greyscale") },
 	{ MODKEY,                       XK_h,                    setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_l,                    setmfact,       {.f = +0.05} },
 	{ MODKEY,                       XK_space,                zoom,           {0} },
