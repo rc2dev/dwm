@@ -289,7 +289,6 @@ static Button buttons[] = {
 	{ ClkLtSymbol,          0,              Button3,        setlayout,      {.v = &layouts[1]} },
 	{ ClkLtSymbol,          0,              Button2,        killclient,     {0} },
 	{ ClkWinTitle,          0,              Button1,        zoom,           {0} },
-	{ ClkWinTitle,          0,              Button3,        spawn,          SHCMD("nautilus") },
 	{ ClkWinTitle,          0,              Button4,        focusstack,     {.i = INC(-1) } },
 	{ ClkWinTitle,          0,              Button5,        focusstack,     {.i = INC(+1) } },
 	{ ClkStatusText,        0,              Button1,        spawn,          SHCMD("zenity --calendar") },
