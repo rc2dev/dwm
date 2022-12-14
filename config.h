@@ -203,7 +203,6 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_c,                    spawn,          SHCMD("zenity --calendar") },
 	{ MODKEY,                       XK_i,                    incnmaster,     {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_i,                    incnmaster,     {.i = -1 } },
-	{ MODKEY|ShiftMask,             XK_g,                    spawn,          SHCMD("greyscale") },
 	{ MODKEY,                       XK_h,                    setmfact,       {.f = -0.05} },
 	{ MODKEY,                       XK_l,                    setmfact,       {.f = +0.05} },
 	{ MODKEY,                       XK_space,                zoom,           {0} },
@@ -260,7 +259,7 @@ static Key keys[] = {
 	{ 0,                            XF86XK_MonBrightnessUp,   spawn,         SHCMD("brightness -time 0 -inc 7") },
 	{ 0,                            XF86XK_MonBrightnessDown, spawn,         SHCMD("brightness -time 0 -dec 7") },
 	{ 0,                            XF86XK_AudioMicMute,      spawn,         SHCMD("pactl -- set-source-mute 1 toggle") },
-	{ 0,                            XF86XK_Display,           spawn,         SHCMD("autorandr --change") },
+	{ 0,                            XF86XK_Display,           spawn,         SHCMD("hotplug-monitor") },
 
 	TAGKEYS(                        XK_1,                    0)
 	TAGKEYS(                        XK_2,                    1)
