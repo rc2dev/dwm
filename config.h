@@ -197,7 +197,7 @@ static Key keys[] = {
 	/* modifier                     key                      function        argument */
 	STACKKEYS(MODKEY,                                        focus)
 	STACKKEYS(MODKEY|ShiftMask,                              push)
-	{ MODKEY|ShiftMask,             XK_a,                    togglescratch,  {.v = scratchpadcmd } },
+	{ MODKEY|ShiftMask,             XK_Return,               togglescratch,  {.v = scratchpadcmd } },
 	{ MODKEY,                       XK_BackSpace,            spawn,          SHCMD("slock") },
 	{ NULL,                         XF86XK_ScreenSaver,      spawn,          SHCMD("slock") }, /* For x220. */
 	{ MODKEY|ShiftMask,             XK_b,                    togglebar,      {0} },
