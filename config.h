@@ -169,6 +169,9 @@ static const char *player_prev[] = { "/bin/sh", "-c", "playerctl previous && sle
 static const char *player_next[] = { "/bin/sh", "-c", "playerctl next && sleep 0.5 && dwmbar", NULL };
 static const char *player_pause[] = { "/bin/sh", "-c", "playerctl play-pause && sleep 0.5 && dwmbar", NULL };
 static const char *player_stop[] = { "/bin/sh", "-c", "playerctl stop && sleep 0.5 && dwmbar", NULL };
+static const char *player_ff[] = { "/bin/sh", "-c", "playerctl position 10+", NULL };
+static const char *player_rw[] = { "/bin/sh", "-c", "playerctl position 10-", NULL };
+static const char *player_shift[] = { "/bin/sh", "-c", "playerctld shift && dwmbar", NULL };
 
 /*
  * Xresources preferences to load at startup
@@ -254,6 +257,10 @@ static Key keys[] = {
 	{ 0,                            XF86XK_AudioNext,        spawn,          {.v = player_next } },
 	{ 0,                            XF86XK_AudioPlay,        spawn,          {.v = player_pause } },
 	{ 0,                            XF86XK_AudioStop,        spawn,          {.v = player_stop } },
+	{ MODKEY,                       XK_period,               spawn,          {.v = player_ff } },
+	{ MODKEY,                       XK_comma,                spawn,          {.v = player_rw } },
+	{ MODKEY,                       XK_semicolon,            spawn,          {.v = player_shift } },
+
 
 	/* For x220. */
 	/* Brightness: Needed after bios update. */
