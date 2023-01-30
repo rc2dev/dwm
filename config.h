@@ -244,9 +244,7 @@ static Key keys[] = {
 	//{ MODKEY|Mod4Mask|ShiftMask,    XK_9,                    incrovgaps,     {.i = -1 } },
 
 	/* dmenu */
-	/* This --dmenu option brings commands on PATH, as per j4-dmenu-desktop documentation. */
-	/* Not passing --no-generic shows both generic name and application name. */
-	{ MODKEY,                       XK_d,                    spawn,          SHCMD("j4-dmenu-desktop --no-generic --term=\"$TERMINAL\" --dmenu=\"dmenu -l 6 -g 8\"") },
+	{ MODKEY,                       XK_d,                    spawn,          SHCMD("rofi -show") },
 	{ Mod1Mask|ControlMask,         XK_Delete,               spawn,          SHCMD("dmenu_power") },
 
 	/* Audio */
