@@ -24,6 +24,7 @@ dwm is an extremely fast, small, and dynamic window manager for X.
 
 ## My own patches
 
+- Switch to corresponding tag on spawning an application.
 - Complement to `vanitygaps` patch: Allow toggling smartgaps on runtime.
 - Complement to `vanitygaps` patch: Add gaps to monocle, respecting smartgaps.
 - Complement to `vanitygaps` patch: Add `vanitygaps.c` to `Makefile`, so changes are detected.
