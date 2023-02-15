@@ -255,9 +255,12 @@ static Key keys[] = {
 	{ 0,                            XF86XK_AudioNext,        spawn,          {.v = player_next } },
 	{ 0,                            XF86XK_AudioPlay,        spawn,          {.v = player_pause } },
 	{ 0,                            XF86XK_AudioStop,        spawn,          {.v = player_stop } },
-	{ MODKEY,                       XK_period,               spawn,          {.v = player_ff } },
-	{ MODKEY,                       XK_comma,                spawn,          {.v = player_rw } },
-	{ MODKEY,                       XK_semicolon,            spawn,          {.v = player_shift } },
+	{ MODKEY,                       XK_comma,                spawn,          {.v = player_prev } },
+	{ MODKEY,                       XK_period,               spawn,          {.v = player_next } },
+	{ MODKEY,                       XK_semicolon,            spawn,          {.v = player_pause } },
+	{ MODKEY|ShiftMask,             XK_comma,                spawn,          {.v = player_rw } },
+	{ MODKEY|ShiftMask,             XK_period,               spawn,          {.v = player_ff } },
+	{ MODKEY|ShiftMask,             XK_semicolon,            spawn,          {.v = player_shift } },
 
 
 	/* For x220. */
