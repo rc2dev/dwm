@@ -72,7 +72,6 @@ static const Rule rules[] = {
 	{ "Chromium-freeworld",    NULL,      NULL,                    1 << 0,    0,          0,        0,          0,         -1 },
 	{ "firefox",               NULL,      NULL,                    1 << 0,    0,          0,        0,          0,         -1 },
 	{ "Code",                  NULL,      NULL,                    1 << 2,    0,          0,        0,          0,         -1 },
-	{ NULL,                    NULL,      "nvim",                  1 << 3,    0,          0,        0,          0,         -1 },
 	{ "calibre",               NULL,      NULL,                    1 << 4,    0,          0,        0,          0,         -1 },
 	{ "Virt-manager",          NULL,      NULL,                    1 << 5,    0,          0,        0,          0,         -1 },
 	{ "Virt-viewer",           NULL,      NULL,                    1 << 5,    0,          0,        0,          0,         -1 },
