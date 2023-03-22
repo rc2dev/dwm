@@ -161,15 +161,17 @@ static char dmenumon[2] = "0"; /* [> component of dmenucmd, manipulated in spawn
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, NULL };
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "105x30",  NULL };
-static const char *volup[] = { "/bin/sh", "-c",  "volume up", NULL };
-static const char *voldown[] = { "/bin/sh", "-c",  "volume down", NULL };
-static const char *mute[] = { "/bin/sh", "-c",  "volume mute", NULL };
-static const char *player_prev[] = { "/bin/sh", "-c", "playerctl previous && sleep 0.5 && dwmbar", NULL };
-static const char *player_next[] = { "/bin/sh", "-c", "playerctl next && sleep 0.5 && dwmbar", NULL };
+
+/* multimedia commands */
+static const char *vol_up[] =       { "volume", "up", NULL };
+static const char *vol_down[] =     { "volume", "down", NULL };
+static const char *vol_mute[] =     { "volume", "mute", NULL };
+static const char *player_prev[] =  { "/bin/sh", "-c", "playerctl previous && sleep 0.5 && dwmbar", NULL };
+static const char *player_next[] =  { "/bin/sh", "-c", "playerctl next && sleep 0.5 && dwmbar", NULL };
 static const char *player_pause[] = { "/bin/sh", "-c", "playerctl play-pause && sleep 0.5 && dwmbar", NULL };
-static const char *player_stop[] = { "/bin/sh", "-c", "playerctl stop && sleep 0.5 && dwmbar", NULL };
-static const char *player_ff[] = { "/bin/sh", "-c", "playerctl position 10+", NULL };
-static const char *player_rw[] = { "/bin/sh", "-c", "playerctl position 10-", NULL };
+static const char *player_stop[] =  { "/bin/sh", "-c", "playerctl stop && sleep 0.5 && dwmbar", NULL };
+static const char *player_ff[] =    { "/bin/sh", "-c", "playerctl position 10+", NULL };
+static const char *player_rw[] =    { "/bin/sh", "-c", "playerctl position 10-", NULL };
 static const char *player_shift[] = { "/bin/sh", "-c", "playerctld shift && dwmbar", NULL };
 
 /*
@@ -201,7 +203,7 @@ static Key keys[] = {
 	STACKKEYS(MODKEY|ShiftMask,                              push)
 	{ MODKEY,                       XK_dead_acute,           togglescratch,  {.v = scratchpadcmd } },
 	{ MODKEY,                       XK_BackSpace,            spawn,          SHCMD("slock") },
-	{ NULL,                         XF86XK_ScreenSaver,      spawn,          SHCMD("slock") }, /* For x220. */
+	{ NULL,                         XF86XK_ScreenSaver,      spawn,          SHCMD("slock") }, // for x220
 	{ MODKEY|ShiftMask,             XK_b,                    togglebar,      {0} },
 	{ MODKEY|ShiftMask,             XK_c,                    spawn,          SHCMD("zenity --calendar") },
 	{ MODKEY,                       XK_bracketright,         incnmaster,     {.i = +1 } },
@@ -246,10 +248,10 @@ static Key keys[] = {
 	{ MODKEY,                       XK_d,                    spawn,          SHCMD("rofi -show") },
 	{ Mod1Mask|ControlMask,         XK_Delete,               spawn,          SHCMD("dmenu_power") },
 
-	/* Audio */
-	{ 0,                            XF86XK_AudioMute,        spawn,          {.v = mute } },
-	{ 0,                            XF86XK_AudioLowerVolume, spawn,          {.v = voldown } },
-	{ 0,                            XF86XK_AudioRaiseVolume, spawn,          {.v = volup } },
+	/* multimedia */
+	{ 0,                            XF86XK_AudioMute,        spawn,          {.v = vol_mute } },
+	{ 0,                            XF86XK_AudioLowerVolume, spawn,          {.v = vol_down } },
+	{ 0,                            XF86XK_AudioRaiseVolume, spawn,          {.v = vol_up } },
 	{ 0,                            XF86XK_AudioPrev,        spawn,          {.v = player_prev } },
 	{ 0,                            XF86XK_AudioNext,        spawn,          {.v = player_next } },
 	{ 0,                            XF86XK_AudioPlay,        spawn,          {.v = player_pause } },
@@ -262,7 +264,6 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_comma,                spawn,          {.v = player_rw } },
 	{ MODKEY|ShiftMask,             XK_period,               spawn,          {.v = player_ff } },
 	{ MODKEY|ShiftMask,             XK_semicolon,            spawn,          {.v = player_shift } },
-
 
 	/* For x220. */
 	/* Brightness: Needed after bios update. */
@@ -294,29 +295,29 @@ static const int scrollargs[][2] = {
 /* button definitions */
 /* click can be ClkTagBar, ClkLtSymbol, ClkStatusText, ClkWinTitle, ClkClientWin, or ClkRootWin */
 static Button buttons[] = {
-	/* click                event mask      button          function        argument */
-	{ ClkLtSymbol,          0,              Button1,        setlayout,      {0} },
-	{ ClkLtSymbol,          0,              Button3,        setlayout,      {.v = &layouts[1]} },
-	{ ClkLtSymbol,          0,              Button2,        killclient,     {0} },
-	{ ClkWinTitle,          0,              Button1,        zoom,           {0} },
-	{ ClkWinTitle,          0,              Button4,        focusstack,     {.i = INC(-1) } },
-	{ ClkWinTitle,          0,              Button5,        focusstack,     {.i = INC(+1) } },
-	{ ClkStatusText,        0,              Button1,        spawn,          SHCMD("zenity --calendar") },
-	{ ClkStatusText,        0,              Button9,        spawn,          {.v = player_next } },
-	{ ClkStatusText,        0,              Button8,        spawn,          {.v = player_prev } },
-	{ ClkStatusText,        0,              Button3,        spawn,          {.v = player_pause } },
-	{ ClkStatusText,        0,              Button4,        spawn,          {.v = volup } },
-	{ ClkStatusText,        0,              Button5,        spawn,          {.v = voldown } },
-	{ ClkClientWin,         MODKEY,         Button1,        movemouse,      {0} },
-	{ ClkClientWin,         MODKEY,         Button2,        togglefloating, {0} },
-	{ ClkClientWin,         MODKEY,         Button3,        resizemouse,    {0} },
+	/* click                event mask      button          function           argument */
+	{ ClkLtSymbol,          0,              Button1,        setlayout,         {0} },
+	{ ClkLtSymbol,          0,              Button3,        setlayout,         {.v = &layouts[1]} },
+	{ ClkLtSymbol,          0,              Button2,        killclient,        {0} },
+	{ ClkWinTitle,          0,              Button1,        zoom,              {0} },
+	{ ClkWinTitle,          0,              Button4,        focusstack,        {.i = INC(-1) } },
+	{ ClkWinTitle,          0,              Button5,        focusstack,        {.i = INC(+1) } },
+	{ ClkStatusText,        0,              Button1,        spawn,             SHCMD("zenity --calendar") },
+	{ ClkStatusText,        0,              Button9,        spawn,             {.v = player_next } },
+	{ ClkStatusText,        0,              Button8,        spawn,             {.v = player_prev } },
+	{ ClkStatusText,        0,              Button3,        spawn,             {.v = player_pause } },
+	{ ClkStatusText,        0,              Button4,        spawn,             {.v = vol_up } },
+	{ ClkStatusText,        0,              Button5,        spawn,             {.v = vol_down } },
+	{ ClkClientWin,         MODKEY,         Button1,        movemouse,         {0} },
+	{ ClkClientWin,         MODKEY,         Button2,        togglefloating,    {0} },
+	{ ClkClientWin,         MODKEY,         Button3,        resizemouse,       {0} },
 	{ ClkClientWin,         MODKEY,         Button5,        resizemousescroll, {.v = &scrollargs[0]} },
 	{ ClkClientWin,         MODKEY,         Button4,        resizemousescroll, {.v = &scrollargs[1]} },
 	{ ClkClientWin,         MODKEY,         Button7,        resizemousescroll, {.v = &scrollargs[2]} },
 	{ ClkClientWin,         MODKEY,         Button6,        resizemousescroll, {.v = &scrollargs[3]} },
-	{ ClkTagBar,            0,              Button1,        view,           {0} },
-	{ ClkTagBar,            0,              Button3,        toggleview,     {0} },
-	{ ClkTagBar,            MODKEY,         Button1,        tag,            {0} },
-	{ ClkTagBar,            MODKEY,         Button3,        toggletag,      {0} },
+	{ ClkTagBar,            0,              Button1,        view,              {0} },
+	{ ClkTagBar,            0,              Button3,        toggleview,        {0} },
+	{ ClkTagBar,            MODKEY,         Button1,        tag,               {0} },
+	{ ClkTagBar,            MODKEY,         Button3,        toggletag,         {0} },
 };
 
