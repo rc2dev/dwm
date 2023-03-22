@@ -253,6 +253,8 @@ static Key keys[] = {
 	{ 0,                            XF86XK_AudioPrev,        spawn,          {.v = player_prev } },
 	{ 0,                            XF86XK_AudioNext,        spawn,          {.v = player_next } },
 	{ 0,                            XF86XK_AudioPlay,        spawn,          {.v = player_pause } },
+	/* AudioPause is sent by headset buttons besides AudioPlay. */
+	{ 0,                            XF86XK_AudioPause,       spawn,          {.v = player_pause } },
 	{ 0,                            XF86XK_AudioStop,        spawn,          {.v = player_stop } },
 	{ MODKEY,                       XK_comma,                spawn,          {.v = player_prev } },
 	{ MODKEY,                       XK_period,               spawn,          {.v = player_next } },
