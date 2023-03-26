@@ -83,7 +83,6 @@ static const Rule rules[] = {
 	{ "Geary",                 NULL,      NULL,                    1 << 6,    0,          0,        0,          0,         -1 },
 	{ "St",                    "cmus",    NULL,                    1 << 7,    0,          0,        0,          0,         -1 },
 	{ "Spotify",               NULL,      NULL,                    1 << 7,    0,          0,        0,          0,         -1 },
-	{ "St",                    "sys",     NULL,                    1 << 8,    0,          0,        0,          0,         -1 },
 
 	/* Floating */
 	{ "gnome-calculator",      NULL,      NULL,                    0,         1,          0,        0,          0,         -1 },
