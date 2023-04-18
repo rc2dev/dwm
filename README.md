@@ -6,6 +6,7 @@ dwm is an extremely fast, small, and dynamic window manager for X.
 
 ## Third party patches
 
+- adjacenttag "skipvacant" version
 - alwayscenter
 - bar height
 - cyclelayouts
