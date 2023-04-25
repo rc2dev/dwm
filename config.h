@@ -307,7 +307,7 @@ static Button buttons[] = {
 	{ ClkWinTitle,          0,              Button4,        focusstack,        {.i = INC(-1) } },
 	{ ClkWinTitle,          0,              Button5,        focusstack,        {.i = INC(+1) } },
 	{ ClkStatusText,        0,              Button1,        spawn,             SHCMD("zenity --calendar") },
-	{ ClkStatusText,        0,              Button2,        spawn,             SHCMD("$TERMINAL -e htop") },
+	{ ClkStatusText,        0,              Button2,        spawn,             {.v = player_shift } },
 	{ ClkStatusText,        0,              Button9,        spawn,             {.v = player_next } },
 	{ ClkStatusText,        0,              Button8,        spawn,             {.v = player_prev } },
 	{ ClkStatusText,        0,              Button3,        spawn,             {.v = player_pause } },
