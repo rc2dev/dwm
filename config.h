@@ -99,6 +99,8 @@ static const Rule rules[] = {
 	{ "mpv",                   NULL,      NULL,                    0,         1,          1,        0,          0,         -1 },
 	{ NULL,                    NULL,      "Picture in picture",    0,         1,          1,        0,          0,         -1 },
 	{ NULL,                    NULL,      "Picture-in-Picture",    0,         1,          1,        0,          0,         -1 },
+	/* Float works oob. We set as sticky so it is placed on bottom right. */
+	{ "Galendae",              NULL,      NULL,                    0,         1,          1,        0,          0,         -1 },
 
 	/* Swallow */
 	{ "Alacritty",             NULL,      NULL,                    0,         0,          0,        1,          0,         -1 },
@@ -206,7 +208,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_BackSpace,            spawn,          SHCMD("slock") },
 	{ NULL,                         XF86XK_ScreenSaver,      spawn,          SHCMD("slock") }, // for x220
 	{ MODKEY|ShiftMask,             XK_b,                    togglebar,      {0} },
-	{ MODKEY|ShiftMask,             XK_c,                    spawn,          SHCMD("zenity --calendar") },
+	{ MODKEY|ShiftMask,             XK_c,                    spawn,          SHCMD("galendae") },
 	{ MODKEY,                       XK_bracketright,         incnmaster,     {.i = +1 } },
 	{ MODKEY,                       XK_bracketleft,          incnmaster,     {.i = -1 } },
 	{ MODKEY,                       XK_h,                    setmfact,       {.f = -0.05} },
@@ -306,7 +308,7 @@ static Button buttons[] = {
 	{ ClkWinTitle,          0,              Button2,        killclient,        {0} },
 	{ ClkWinTitle,          0,              Button4,        focusstack,        {.i = INC(-1) } },
 	{ ClkWinTitle,          0,              Button5,        focusstack,        {.i = INC(+1) } },
-	{ ClkStatusText,        0,              Button1,        spawn,             SHCMD("zenity --calendar") },
+	{ ClkStatusText,        0,              Button1,        spawn,             SHCMD("galendae") },
 	{ ClkStatusText,        0,              Button2,        spawn,             {.v = player_shift } },
 	{ ClkStatusText,        0,              Button9,        spawn,             {.v = player_next } },
 	{ ClkStatusText,        0,              Button8,        spawn,             {.v = player_prev } },
