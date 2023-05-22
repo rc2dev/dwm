@@ -201,7 +201,7 @@ static Key keys[] = {
 	STACKKEYS(MODKEY,                                        focus)
 	STACKKEYS(MODKEY|ShiftMask,                              push)
 	{ MODKEY,                       XK_dead_acute,           togglescratch,  {.v = scratchpadcmd } },
-	{ MODKEY,                       XK_BackSpace,            spawn,          SHCMD("slock") },
+	{ MODKEY|ShiftMask,             XK_BackSpace,            spawn,          SHCMD("slock") },
 	{ NULL,                         XF86XK_ScreenSaver,      spawn,          SHCMD("slock") }, // for x220
 	{ MODKEY|ShiftMask,             XK_b,                    togglebar,      {0} },
 	{ MODKEY|ShiftMask,             XK_c,                    spawn,          SHCMD("galendae") },
