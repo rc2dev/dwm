@@ -69,10 +69,7 @@ static const Rule rules[] = {
 	/* class                  instance    title                    tags mask  isfloating  issticky  isterminal  noswallow  monitor */
 	/* Tags */
 	{ "Brave-browser",         NULL,      NULL,                    1 << 0,    0,          0,        0,          0,         -1 },
-	{ "Chromium-freeworld",    NULL,      NULL,                    1 << 0,    0,          0,        0,          0,         -1 },
-	{ "firefox",               NULL,      NULL,                    1 << 0,    0,          0,        0,          0,         -1 },
 	{ "Code",                  NULL,      NULL,                    1 << 2,    0,          0,        0,          0,         -1 },
-	{ "calibre",               NULL,      NULL,                    1 << 4,    0,          0,        0,          0,         -1 },
 	{ "Virt-manager",          NULL,      NULL,                    1 << 5,    0,          0,        0,          0,         -1 },
 	{ "Virt-viewer",           NULL,      NULL,                    1 << 5,    0,          0,        0,          0,         -1 },
 	{ "Zenity",                NULL,      "virt-viewer",           1 << 5,    0,          0,        0,          0,         -1 },
@@ -98,7 +95,6 @@ static const Rule rules[] = {
 	/* Floating and sticky */
 	{ "mpv",                   NULL,      NULL,                    0,         1,          1,        0,          0,         -1 },
 	{ NULL,                    NULL,      "Picture in picture",    0,         1,          1,        0,          0,         -1 },
-	{ NULL,                    NULL,      "Picture-in-Picture",    0,         1,          1,        0,          0,         -1 },
 	/* Float works oob. We set as sticky so it is placed on bottom right. */
 	{ "Galendae",              NULL,      NULL,                    0,         1,          1,        0,          0,         -1 },
 
