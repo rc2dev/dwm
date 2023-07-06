@@ -160,7 +160,7 @@ static char dmenumon[2] = "0"; /* [> component of dmenucmd, manipulated in spawn
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, NULL };
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "105x30",  "-e", "tmux", "new-session", "-As" "scratchpad", NULL };
-static const char *launcher[] = { "rofi", "-show" };
+static const char *launcher[] = { "rofi", "-show", "drun" };
 
 /* multimedia commands */
 static const char *vol_up[] =       { "volume", "up", NULL };
