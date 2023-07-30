@@ -114,10 +114,11 @@ static const int scrollsensetivity = 30; /* 1 means resize window by 1 pixel for
 #define FORCE_VSPLIT 1  /* nrowgrid layout: force two clients to always split vertically */
 #include "vanitygaps.c"
 
+/* first entry is default */
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "T",        tile },    /* first entry is default */
 	{ "M",        monocle },
+	{ "T",        tile },
 	{ "[@]",      spiral },
 	{ "[\\]",     dwindle },
 	{ "D",        deck },
@@ -219,9 +220,9 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_0,                    tag,            {.ui = ~0 } },
 
 	/* Layouts */
-	{ MODKEY,                       XK_t,                    setlayout,      {.v = &layouts[0]} }, // tiling
+	{ MODKEY,                       XK_t,                    setlayout,      {.v = &layouts[1]} }, // tiling
 	{ MODKEY|ShiftMask,             XK_t,                    setlayout,      {.v = &layouts[5]} }, // bstack
-	{ MODKEY,                       XK_m,                    setlayout,      {.v = &layouts[1]} }, // monocle
+	{ MODKEY,                       XK_m,                    setlayout,      {.v = &layouts[0]} }, // monocle
 	{ MODKEY|ShiftMask,             XK_m,                    setlayout,      {.v = &layouts[4]} }, // deck
 
 	/* Gaps */
