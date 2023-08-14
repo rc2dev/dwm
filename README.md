@@ -26,6 +26,8 @@ _Notice: To cleanly integrate updates from upstream, this branch might be rebase
 ## My own patches
 
 - Switch to corresponding tag on spawning an application.
+- Prevent other tiled windows to show below transparent windows on monocle layout.
+- Prevent other tiled windows to show below transparent windows on deck layout.
 - Complement to `vanitygaps` patch: Allow toggling smartgaps on runtime.
 - Complement to `vanitygaps` patch: Add gaps to monocle, respecting smartgaps.
 - Complement to `vanitygaps` patch: Add `vanitygaps.c` to `Makefile`, so changes are detected.
