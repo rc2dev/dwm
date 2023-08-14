@@ -456,8 +456,20 @@ deck(Monitor *m)
 			resize(c, mx, my, mw - (2*c->bw), (mh / mfacts) + (i < mrest ? 1 : 0) - (2*c->bw), 0);
 			my += HEIGHT(c) + ih;
 		} else {
-			resize(c, sx, sy, sw - (2*c->bw), sh - (2*c->bw), 0);
+			XMoveWindow(dpy, c->win, WIDTH(c) * -2, c->y);
 		}
+
+	for (Client *s = m->stack; s; s = s->snext) {
+		if (!ISVISIBLE(s) || s->isfloating)
+			continue;
+
+		for (i = my = 0, c = nexttiled(m->clients); c && c != s; c = nexttiled(c->next), i++);
+		if (i < m->nmaster)
+			continue;
+		XMoveWindow(dpy, s->win, c->x, c->y);
+		resize(c, sx, sy, sw - (2*c->bw), sh - (2*c->bw), 0);
+		break;
+	}
 }
 
 /*

@@ -1087,6 +1087,8 @@ focus(Client *c)
 	selmon->sel = c;
 	if (selmon->lt[selmon->sellt]->arrange == monocle)
 		arrangemon(selmon);
+	if (selmon->lt[selmon->sellt]->arrange == deck)
+		arrangemon(selmon);
 	drawbars();
 }
 
