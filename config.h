@@ -78,6 +78,7 @@ static const Rule rules[] = {
 	{ "thunderbird",           NULL,      NULL,                    1 << 6,    0,          0,        0,          0,         -1 },
 	{ "Geary",                 NULL,      NULL,                    1 << 6,    0,          0,        0,          0,         -1 },
 	{ "St",                    "cmus",    NULL,                    1 << 7,    0,          0,        0,          0,         -1 },
+	{ "Rhythmbox",             NULL,      NULL,                    1 << 7,    0,          0,        0,          0,         -1 },
 	{ "Spotify",               NULL,      NULL,                    1 << 7,    0,          0,        0,          0,         -1 },
 
 	/* Floating */
