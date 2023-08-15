@@ -12,14 +12,26 @@
 #define Button8 8
 #define Button9 9
 
-/* appearance */
+/* general appearance */
 static unsigned int borderpx = 1;  /* border pixel of windows */
 static unsigned int snap = 32;  /* snap pixel */
+static const int swallowfloating = 0;  /* 1 means swallow floating windows by default */
+static char font[] = "Ubuntu Nerd Font:size=10";
+static char dmenufont[] = "Ubuntu Nerd Font:size=10";
+static const char *fonts[] = { font };
+
+/* bar */
 static int showbar = 1;   /* 0 means no bar */
 static int topbar = 1;   /* 0 means bottom bar */
-static char font[] = "Ubuntu Nerd Font:size=10";
-static char dmenufont[] = "Ubuntu:size=10";
-static const char *fonts[] = { font };
+static const int user_bh = 20;  /* 0 means that dwm will calculate bar height, >= 1 means dwm will user_bh as bar height */
+
+/* systray */
+static const unsigned int systraypinning = 0;  /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
+static const unsigned int systrayspacing = 4;  /* systray spacing */
+static const int systraypinningfailfirst = 1;  /* 1: if pinning fails, display systray on the first monitor, False: display systray on the last monitor*/
+static const int showsystray = 1;  /* 0 means no systray */
+
+/* gaps */
 static const unsigned int gappih = 9;  /* horiz inner gap between windows */
 static const unsigned int gappiv = 9;  /* vert inner gap between windows */
 static const unsigned int gappoh = 9;  /* horiz outer gap between windows and screen edge */
@@ -28,12 +40,6 @@ static int smartgaps = 0;  /* 1 means no outer gap when there is only one window
 #if !PERTAG_PATCH
 static int enablegaps = 1;
 #endif // PERTAG_PATCH
-static const int swallowfloating = 0;  /* 1 means swallow floating windows by default */
-static const unsigned int systraypinning = 0;  /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
-static const unsigned int systrayspacing = 4;  /* systray spacing */
-static const int systraypinningfailfirst = 1;  /* 1: if pinning fails, display systray on the first monitor, False: display systray on the last monitor*/
-static const int showsystray = 1;  /* 0 means no systray */
-static const int user_bh = 20;  /* 0 means that dwm will calculate bar height, >= 1 means dwm will user_bh as bar height */
 
 /* colorscheme */
 static char normbgcolor[] = "#222222";
@@ -49,17 +55,7 @@ static char *colors[][3] = {
 };
 
 /* tagging */
-static const char *tags[] = {
-	"1",
-	"2",
-	"3",
-	"4",
-	"5",
-	"6",
-	"7",
-	"8",
-	"9"
-};
+static const char *tags[] = { "1", "2", "3", "4", "5", "6", "7", "8", "9" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -143,10 +139,10 @@ static const Layout layouts[] = {
 	{ MODKEY|ShiftMask,             KEY,      tag,            {.ui = 1 << TAG} }, \
 	{ MODKEY|ControlMask|ShiftMask, KEY,      toggletag,      {.ui = 1 << TAG} },
 #define STACKKEYS(MOD,ACTION) \
-	{ MOD, XK_j,     ACTION##stack, {.i = INC(+1) } }, \
-	{ MOD, XK_k,     ACTION##stack, {.i = INC(-1) } }, \
-	{ MOD, XK_Tab,     ACTION##stack, {.i = INC(+1) } }, \
-	{ MOD|ShiftMask, XK_Tab,     ACTION##stack, {.i = INC(-1) } }, \
+	{ MOD,           XK_j,   ACTION##stack, {.i = INC(+1) } }, \
+	{ MOD,           XK_k,   ACTION##stack, {.i = INC(-1) } }, \
+	{ MOD,           XK_Tab, ACTION##stack, {.i = INC(+1) } }, \
+	{ MOD|ShiftMask, XK_Tab, ACTION##stack, {.i = INC(-1) } }, \
 	//{ MOD, XK_g,     ACTION##stack, {.i = 0 } }, \
 	//{ MOD, XK_a,     ACTION##stack, {.i = 1 } }, \
 	//{ MOD, XK_z,     ACTION##stack, {.i = 2 } }, \
@@ -161,7 +157,6 @@ static char dmenumon[2] = "0"; /* [> component of dmenucmd, manipulated in spawn
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, NULL };
 static const char scratchpadname[] = "scratchpad";
 static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "105x30",  "-e", "tmux", "new-session", "-As" "scratchpad", NULL };
-static const char *launcher[] = { "rofi", "-show", "drun" };
 
 /* multimedia commands */
 static const char *vol_up[] =       { "volume", "up", NULL };
