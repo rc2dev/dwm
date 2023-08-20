@@ -240,7 +240,7 @@ static Key keys[] = {
 	//{ MODKEY|Mod4Mask|ShiftMask,    XK_9,                    incrovgaps,     {.i = -1 } },
 
 	/* dmenu */
-	{ MODKEY,                       XK_d,                    spawn,          SHCMD("rofi -show") },
+	{ MODKEY,                       XK_d,                    spawn,          SHCMD("rofi -show drun -theme launchpad -show-icons") },
 	{ Mod1Mask|ControlMask,         XK_Delete,               spawn,          SHCMD("dmenu_power") },
 
 	/* multimedia */
