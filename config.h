@@ -211,7 +211,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_q,                    killclient,     {0} },
 	{ MODKEY,                       XK_g,                    cyclelayout,    {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_f,                    togglefloating, {0} },
-	{ MODKEY|ShiftMask,             XK_s,                    togglesticky,   {0} },
+	{ MODKEY|ShiftMask,             XK_x,                    togglesticky,   {0} },
 	{ MODKEY,                       XK_0,                    view,           {.ui = ~0 } },
 	{ MODKEY|ShiftMask,             XK_0,                    tag,            {.ui = ~0 } },
 
