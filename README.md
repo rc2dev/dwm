@@ -22,6 +22,7 @@ _Notice: To cleanly integrate updates from upstream, this branch might be rebase
 - swallow
 - systray
 - tapresize
+- truecenteredtitle
 - vanitygaps
 - xresources
 
