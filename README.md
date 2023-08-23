@@ -13,6 +13,7 @@ _Notice: To cleanly integrate updates from upstream, this branch might be rebase
 - desktop_icons
 - fixborders
 - focusonnetactive
+- hide vacant tags
 - noborder
 - pertag
 - restartsig
