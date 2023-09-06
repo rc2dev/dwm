@@ -162,13 +162,13 @@ static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "105x30
 static const char *vol_up[] =       { "volume", "up", NULL };
 static const char *vol_down[] =     { "volume", "down", NULL };
 static const char *vol_mute[] =     { "volume", "mute", NULL };
-static const char *player_prev[] =  { "/bin/sh", "-c", "playerctl previous && sleep 0.5 && dwmbar", NULL };
-static const char *player_next[] =  { "/bin/sh", "-c", "playerctl next && sleep 0.5 && dwmbar", NULL };
-static const char *player_pause[] = { "/bin/sh", "-c", "playerctl play-pause && sleep 0.5 && dwmbar", NULL };
-static const char *player_stop[] =  { "/bin/sh", "-c", "playerctl stop && sleep 0.5 && dwmbar", NULL };
+static const char *player_prev[] =  { "/bin/sh", "-c", "playerctl previous && sleep 0.5 && dwm-status", NULL };
+static const char *player_next[] =  { "/bin/sh", "-c", "playerctl next && sleep 0.5 && dwm-status", NULL };
+static const char *player_pause[] = { "/bin/sh", "-c", "playerctl play-pause && sleep 0.5 && dwm-status", NULL };
+static const char *player_stop[] =  { "/bin/sh", "-c", "playerctl stop && sleep 0.5 && dwm-status", NULL };
 static const char *player_ff[] =    { "/bin/sh", "-c", "playerctl position 10+", NULL };
 static const char *player_rw[] =    { "/bin/sh", "-c", "playerctl position 10-", NULL };
-static const char *player_shift[] = { "/bin/sh", "-c", "playerctld shift && dwmbar", NULL };
+static const char *player_shift[] = { "/bin/sh", "-c", "playerctld shift && dwm-status", NULL };
 
 /*
  * Xresources preferences to load at startup
