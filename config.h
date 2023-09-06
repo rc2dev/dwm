@@ -80,17 +80,14 @@ static const Rule rules[] = {
 
 	/* Floating */
 	{ "gnome-calculator",      NULL,      NULL,                    0,         1,          0,        0,          0,         -1 },
-	{ "Nitrogen",              NULL,      NULL,                    0,         1,          0,        0,          0,         -1 },
+	{ "mpv",                   NULL,      NULL,                    0,         1,          0,        0,          0,         -1 },
 	{ "Pavucontrol",           NULL,      NULL,                    0,         1,          0,        0,          0,         -1 },
 	{ "Blueman-manager",       NULL,      NULL,                    0,         1,          0,        0,          0,         -1 },
-	{ "Blueberry.py",          NULL,      NULL,                    0,         1,          0,        0,          0,         -1 },
 	{ "Nm-connection-editor",  NULL,      NULL,                    0,         1,          0,        0,          0,         -1 },
 	{ "flameshot",             NULL,      NULL,                    0,         1,          0,        0,          0,         -1 },
-	{ NULL,                    "Pilorama", NULL,                   0,         1,          0,        0,          0,         -1 },
 	{ "photoshop.exe",         NULL,      NULL,                    0,         1,          0,        0,          0,         -1 },
 
 	/* Floating and sticky */
-	{ "mpv",                   NULL,      NULL,                    0,         1,          1,        0,          0,         -1 },
 	{ NULL,                    NULL,      "Picture in picture",    0,         1,          1,        0,          0,         -1 },
 	/* Float works oob. We set as sticky so it is placed on bottom right. */
 	{ "Galendae",              NULL,      NULL,                    0,         1,          1,        0,          0,         -1 },
