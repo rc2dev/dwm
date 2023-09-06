@@ -20,7 +20,7 @@ _Notice: To cleanly integrate updates from upstream, this branch might be rebase
 - scratchpad
 - sticky
 - swallow
-- systray
+- systray and "icon size"
 - tapresize
 - truecenteredtitle
 - vanitygaps
