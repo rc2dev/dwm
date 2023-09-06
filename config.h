@@ -27,7 +27,7 @@ static const int user_bh = 20;  /* 0 means that dwm will calculate bar height, >
 
 /* systray */
 static const unsigned int systraypinning = 0;  /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
-static const unsigned int systrayspacing = 4;  /* systray spacing */
+static const unsigned int systrayspacing = 5;  /* systray spacing */
 static const int systraypinningfailfirst = 1;  /* 1: if pinning fails, display systray on the first monitor, False: display systray on the last monitor*/
 static const int showsystray = 1;  /* 0 means no systray */
 static const unsigned int systrayiconsize = 16; /* systray icon size in px */
