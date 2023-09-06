@@ -290,6 +290,7 @@ static void tagtoprev(const Arg *arg);
 static void togglebar(const Arg *arg);
 static void togglefloating(const Arg *arg);
 static void togglescratch(const Arg *arg);
+static void togglesystray();
 static void toggletag(const Arg *arg);
 static void togglesticky(const Arg *arg);
 static void toggleview(const Arg *arg);
@@ -2335,6 +2336,16 @@ togglescratch(const Arg *arg)
 		}
 	} else
 		spawn(arg);
+}
+
+void
+togglesystray()
+{
+    if (showsystray)
+        XUnmapWindow(dpy, systray->win);
+    showsystray = !showsystray;
+    updatesystray();
+    updatestatus();
 }
 
 void

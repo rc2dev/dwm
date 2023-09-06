@@ -29,7 +29,7 @@ static const int user_bh = 20;  /* 0 means that dwm will calculate bar height, >
 static const unsigned int systraypinning = 0;  /* 0: sloppy systray follows selected monitor, >0: pin systray to monitor X */
 static const unsigned int systrayspacing = 5;  /* systray spacing */
 static const int systraypinningfailfirst = 1;  /* 1: if pinning fails, display systray on the first monitor, False: display systray on the last monitor*/
-static const int showsystray = 1;  /* 0 means no systray */
+static int showsystray = 1;  /* 0 means no systray */
 static const unsigned int systrayiconsize = 16; /* systray icon size in px */
 
 /* gaps */
@@ -213,6 +213,7 @@ static Key keys[] = {
 	{ MODKEY,                       XK_g,                    cyclelayout,    {.i = +1 } },
 	{ MODKEY|ShiftMask,             XK_f,                    togglefloating, {0} },
 	{ MODKEY|ShiftMask,             XK_x,                    togglesticky,   {0} },
+	{ MODKEY|ShiftMask,             XK_y,                    togglesystray,  {0} },
 	{ MODKEY,                       XK_0,                    view,           {.ui = ~0 } },
 	{ MODKEY|ShiftMask,             XK_0,                    tag,            {.ui = ~0 } },
 
