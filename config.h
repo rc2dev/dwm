@@ -192,6 +192,7 @@ ResourcePref resources[] = {
 	{ "enablegaps",         INTEGER, &enablegaps },
 	{ "smartgaps",          INTEGER, &smartgaps },
 	{ "mfact",              FLOAT,   &mfact },
+	{ "showsystray",        INTEGER, &showsystray },
 };
 
 static Key keys[] = {
