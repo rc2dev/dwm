@@ -74,7 +74,7 @@ static const Rule rules[] = {
 	{ "WebApp-WhatsApp",       NULL,      NULL,                    1 << 5,    0,          0,        0,          0,         -1 },
 	{ "thunderbird",           NULL,      NULL,                    1 << 6,    0,          0,        0,          0,         -1 },
 	{ "Geary",                 NULL,      NULL,                    1 << 6,    0,          0,        0,          0,         -1 },
-	{ "St",                    "cmus",    NULL,                    1 << 7,    0,          0,        0,          0,         -1 },
+	{ NULL,                    "cmus",    NULL,                    1 << 7,    0,          0,        0,          0,         -1 },
 	{ "Rhythmbox",             NULL,      NULL,                    1 << 7,    0,          0,        0,          0,         -1 },
 	{ "Spotify",               NULL,      NULL,                    1 << 7,    0,          0,        0,          0,         -1 },
 
