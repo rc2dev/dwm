@@ -80,6 +80,7 @@ static const Rule rules[] = {
 
 	/* Floating */
 	{ "gnome-calculator",      NULL,      NULL,                    0,         1,          0,        0,          0,         -1 },
+	{ "org.gnome.clocks",      NULL,      NULL,                    0,         1,          0,        0,          0,         -1 },
 	{ "mpv",                   NULL,      NULL,                    0,         1,          0,        0,          0,         -1 },
 	{ "Pavucontrol",           NULL,      NULL,                    0,         1,          0,        0,          0,         -1 },
 	{ "Blueman-manager",       NULL,      NULL,                    0,         1,          0,        0,          0,         -1 },
