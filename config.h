@@ -154,8 +154,6 @@ static const Layout layouts[] = {
 /* commands */
 static char dmenumon[2] = "0"; /* [> component of dmenucmd, manipulated in spawn() <] */
 static const char *dmenucmd[] = { "dmenu_run", "-m", dmenumon, NULL };
-static const char scratchpadname[] = "scratchpad";
-static const char *scratchpadcmd[] = { "st", "-t", scratchpadname, "-g", "105x30",  "-e", "tmux", "new-session", "-As" "scratchpad", NULL };
 
 /* multimedia commands */
 static const char *vol_up[] =       { "volume", "up", NULL };
@@ -197,7 +195,6 @@ static Key keys[] = {
 	/* modifier                     key                      function        argument */
 	STACKKEYS(MODKEY,                                        focus)
 	STACKKEYS(MODKEY|ShiftMask,                              push)
-	{ MODKEY,                       XK_dead_acute,           togglescratch,  {.v = scratchpadcmd } },
 	{ MODKEY|ShiftMask,             XK_BackSpace,            spawn,          SHCMD("slock") },
 	{ NULL,                         XF86XK_ScreenSaver,      spawn,          SHCMD("slock") }, // for x220
 	{ MODKEY|ShiftMask,             XK_b,                    togglebar,      {0} },

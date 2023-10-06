@@ -17,7 +17,6 @@ _Notice: To cleanly integrate updates from upstream, this branch might be rebase
 - noborder
 - pertag
 - restartsig
-- scratchpad
 - sticky
 - swallow
 - systray and "icon size"
