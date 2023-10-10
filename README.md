@@ -18,7 +18,6 @@ _Notice: To cleanly integrate updates from upstream, this branch might be rebase
 - pertag
 - restartsig
 - sticky
-- swallow
 - systray and "icon size"
 - tapresize
 - toggle systray

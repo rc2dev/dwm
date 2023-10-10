@@ -15,7 +15,6 @@
 /* general appearance */
 static unsigned int borderpx = 1;  /* border pixel of windows */
 static unsigned int snap = 32;  /* snap pixel */
-static const int swallowfloating = 0;  /* 1 means swallow floating windows by default */
 static char font[] = "Ubuntu Nerd Font:size=10";
 static char dmenufont[] = "Ubuntu Nerd Font:size=10";
 static const char *fonts[] = { font };
@@ -63,40 +62,35 @@ static const Rule rules[] = {
 	 *	WM_CLASS(STRING) = instance, class
 	 *	WM_NAME(STRING) = title
 	 */
-	/* class                  instance    title                    tags mask  isfloating  issticky  isterminal  noswallow  monitor */
+	/* class                  instance    title                    tags mask  isfloating  issticky  monitor */
 	/* Tags */
-	{ "Code",                  NULL,      NULL,                    1 << 2,    0,          0,        0,          0,         -1 },
-	{ "Virt-manager",          NULL,      NULL,                    1 << 5,    0,          0,        0,          0,         -1 },
-	{ "Virt-viewer",           NULL,      NULL,                    1 << 5,    0,          0,        0,          0,         -1 },
-	{ "Zenity",                NULL,      "virt-viewer",           1 << 5,    0,          0,        0,          0,         -1 },
-	{ "org.remmina.Remmina",   NULL,      NULL,                    1 << 5,    0,          0,        0,          0,         -1 },
-	{ "TelegramDesktop",       NULL,      NULL,                    1 << 5,    0,          0,        0,          0,         -1 },
-	{ "WebApp-WhatsApp",       NULL,      NULL,                    1 << 5,    0,          0,        0,          0,         -1 },
-	{ "thunderbird",           NULL,      NULL,                    1 << 6,    0,          0,        0,          0,         -1 },
-	{ "Geary",                 NULL,      NULL,                    1 << 6,    0,          0,        0,          0,         -1 },
-	{ NULL,                    "cmus",    NULL,                    1 << 7,    0,          0,        0,          0,         -1 },
-	{ "Rhythmbox",             NULL,      NULL,                    1 << 7,    0,          0,        0,          0,         -1 },
-	{ "Spotify",               NULL,      NULL,                    1 << 7,    0,          0,        0,          0,         -1 },
+	{ "Code",                  NULL,      NULL,                    1 << 2,    0,          0,        -1 },
+	{ "Virt-manager",          NULL,      NULL,                    1 << 5,    0,          0,        -1 },
+	{ "Virt-viewer",           NULL,      NULL,                    1 << 5,    0,          0,        -1 },
+	{ "Zenity",                NULL,      "virt-viewer",           1 << 5,    0,          0,        -1 },
+	{ "org.remmina.Remmina",   NULL,      NULL,                    1 << 5,    0,          0,        -1 },
+	{ "TelegramDesktop",       NULL,      NULL,                    1 << 5,    0,          0,        -1 },
+	{ "WebApp-WhatsApp",       NULL,      NULL,                    1 << 5,    0,          0,        -1 },
+	{ "thunderbird",           NULL,      NULL,                    1 << 6,    0,          0,        -1 },
+	{ "Geary",                 NULL,      NULL,                    1 << 6,    0,          0,        -1 },
+	{ NULL,                    "cmus",    NULL,                    1 << 7,    0,          0,        -1 },
+	{ "Rhythmbox",             NULL,      NULL,                    1 << 7,    0,          0,        -1 },
+	{ "Spotify",               NULL,      NULL,                    1 << 7,    0,          0,        -1 },
 
 	/* Floating */
-	{ "gnome-calculator",      NULL,      NULL,                    0,         1,          0,        0,          0,         -1 },
-	{ "org.gnome.clocks",      NULL,      NULL,                    0,         1,          0,        0,          0,         -1 },
-	{ "mpv",                   NULL,      NULL,                    0,         1,          0,        0,          0,         -1 },
-	{ "Pavucontrol",           NULL,      NULL,                    0,         1,          0,        0,          0,         -1 },
-	{ "Blueman-manager",       NULL,      NULL,                    0,         1,          0,        0,          0,         -1 },
-	{ "Nm-connection-editor",  NULL,      NULL,                    0,         1,          0,        0,          0,         -1 },
-	{ "flameshot",             NULL,      NULL,                    0,         1,          0,        0,          0,         -1 },
-	{ "photoshop.exe",         NULL,      NULL,                    0,         1,          0,        0,          0,         -1 },
+	{ "gnome-calculator",      NULL,      NULL,                    0,         1,          0,        -1 },
+	{ "org.gnome.clocks",      NULL,      NULL,                    0,         1,          0,        -1 },
+	{ "mpv",                   NULL,      NULL,                    0,         1,          0,        -1 },
+	{ "Pavucontrol",           NULL,      NULL,                    0,         1,          0,        -1 },
+	{ "Blueman-manager",       NULL,      NULL,                    0,         1,          0,        -1 },
+	{ "Nm-connection-editor",  NULL,      NULL,                    0,         1,          0,        -1 },
+	{ "flameshot",             NULL,      NULL,                    0,         1,          0,        -1 },
+	{ "photoshop.exe",         NULL,      NULL,                    0,         1,          0,        -1 },
 
 	/* Floating and sticky */
-	{ NULL,                    NULL,      "Picture in picture",    0,         1,          1,        0,          0,         -1 },
+	{ NULL,                    NULL,      "Picture in picture",    0,         1,          1,        -1 },
 	/* Float works oob. We set as sticky so it is placed on bottom right. */
-	{ "Galendae",              NULL,      NULL,                    0,         1,          1,        0,          0,         -1 },
-
-	/* Swallow */
-	{ "Alacritty",             NULL,      NULL,                    0,         0,          0,        1,          0,         -1 },
-	{ "St",                    NULL,      NULL,                    0,         0,          0,        1,          0,         -1 },
-	{ NULL,                    NULL,      "Event Tester",          0,         0,          0,        0,          1,         -1 },
+	{ "Galendae",              NULL,      NULL,                    0,         1,          1,        -1 },
 };
 
 /* layout(s) */
