@@ -10,7 +10,6 @@ _Notice: To cleanly integrate updates from upstream, this branch might be rebase
 - alwayscenter
 - bar height
 - cyclelayouts
-- desktop_icons
 - fixborders
 - focusonnetactive
 - hide vacant tags
