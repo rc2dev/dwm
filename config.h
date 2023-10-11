@@ -204,6 +204,7 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_space,                togglefloating, {0} },
 	{ MODKEY|ShiftMask,             XK_x,                    togglesticky,   {0} },
 	{ MODKEY|ShiftMask,             XK_y,                    togglesystray,  {0} },
+	{ MODKEY|ShiftMask,             XK_r,                    spawn,          SHCMD("killall -HUP dwm") },
 	{ MODKEY,                       XK_0,                    view,           {.ui = ~0 } },
 	{ MODKEY|ShiftMask,             XK_0,                    tag,            {.ui = ~0 } },
 
