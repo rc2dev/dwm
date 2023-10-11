@@ -107,8 +107,8 @@ static const int scrollsensetivity = 30; /* 1 means resize window by 1 pixel for
 /* first entry is default */
 static const Layout layouts[] = {
 	/* symbol     arrange function */
-	{ "M",        monocle },
 	{ "T",        tile },
+	{ "M",        monocle },
 	{ "[@]",      spiral },
 	{ "[\\]",     dwindle },
 	{ "D",        deck },
@@ -208,9 +208,9 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_0,                    tag,            {.ui = ~0 } },
 
 	/* Layouts */
-	{ MODKEY,                       XK_t,                    setlayout,      {.v = &layouts[1]} }, // tiling
+	{ MODKEY,                       XK_t,                    setlayout,      {.v = &layouts[0]} }, // tiling
 	{ MODKEY|ShiftMask,             XK_t,                    setlayout,      {.v = &layouts[5]} }, // bstack
-	{ MODKEY,                       XK_m,                    setlayout,      {.v = &layouts[0]} }, // monocle
+	{ MODKEY,                       XK_m,                    setlayout,      {.v = &layouts[1]} }, // monocle
 	{ MODKEY|ShiftMask,             XK_m,                    setlayout,      {.v = &layouts[4]} }, // deck
 
 	/* Gaps */
