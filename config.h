@@ -191,8 +191,10 @@ static Key keys[] = {
 	STACKKEYS(MODKEY|ShiftMask,                              push)
 	{ MODKEY|ShiftMask,             XK_BackSpace,            spawn,          SHCMD("slock") },
 	{ NULL,                         XF86XK_ScreenSaver,      spawn,          SHCMD("slock") }, // for x220
+	{ Mod1Mask|ControlMask,         XK_Delete,               spawn,          SHCMD("dmenu_power") },
 	{ MODKEY|ShiftMask,             XK_b,                    togglebar,      {0} },
 	{ MODKEY|ShiftMask,             XK_c,                    spawn,          SHCMD("galendae") },
+	{ MODKEY,                       XK_d,                    spawn,          SHCMD("rofi -show drun -theme launchpad -show-icons") },
 	{ MODKEY,                       XK_bracketright,         incnmaster,     {.i = +1 } },
 	{ MODKEY,                       XK_bracketleft,          incnmaster,     {.i = -1 } },
 	{ MODKEY,                       XK_h,                    setmfact,       {.f = -0.05} },
@@ -232,10 +234,6 @@ static Key keys[] = {
 	//{ MODKEY|Mod4Mask,              XK_9,                    incrovgaps,     {.i = +1 } },
 	//{ MODKEY|Mod4Mask|ShiftMask,    XK_9,                    incrovgaps,     {.i = -1 } },
 
-	/* dmenu */
-	{ MODKEY,                       XK_d,                    spawn,          SHCMD("rofi -show drun -theme launchpad -show-icons") },
-	{ Mod1Mask|ControlMask,         XK_Delete,               spawn,          SHCMD("dmenu_power") },
-
 	/* multimedia */
 	{ 0,                            XF86XK_AudioMute,        spawn,          {.v = vol_mute } },
 	{ 0,                            XF86XK_AudioLowerVolume, spawn,          {.v = vol_down } },
@@ -260,6 +258,7 @@ static Key keys[] = {
 	{ 0,                            XF86XK_AudioMicMute,      spawn,         SHCMD("pactl -- set-source-mute 1 toggle") },
 	{ 0,                            XF86XK_Display,           spawn,         SHCMD("hotplug-monitor cycle") },
 
+	/* tags */
 	{ MODKEY,                       XK_apostrophe,    viewnext,       {0} },
 	{ MODKEY|ShiftMask,             XK_apostrophe,    viewprev,       {0} },
 	//{ MODKEY|ShiftMask,             XK_Right,  tagtonext,      {0} },
