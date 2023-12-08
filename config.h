@@ -189,12 +189,8 @@ static Key keys[] = {
 	/* modifier                     key                      function        argument */
 	STACKKEYS(MODKEY,                                        focus)
 	STACKKEYS(MODKEY|ShiftMask,                              push)
-	{ MODKEY|ShiftMask,             XK_BackSpace,            spawn,          SHCMD("slock") },
-	{ NULL,                         XF86XK_ScreenSaver,      spawn,          SHCMD("slock") }, // for x220
-	{ Mod1Mask|ControlMask,         XK_Delete,               spawn,          SHCMD("dmenu_power") },
 	{ MODKEY|ShiftMask,             XK_b,                    togglebar,      {0} },
 	{ MODKEY|ShiftMask,             XK_c,                    spawn,          SHCMD("galendae") },
-	{ MODKEY,                       XK_d,                    spawn,          SHCMD("rofi -show drun -theme launchpad -show-icons") },
 	{ MODKEY,                       XK_bracketright,         incnmaster,     {.i = +1 } },
 	{ MODKEY,                       XK_bracketleft,          incnmaster,     {.i = -1 } },
 	{ MODKEY,                       XK_h,                    setmfact,       {.f = -0.05} },
@@ -206,7 +202,6 @@ static Key keys[] = {
 	{ MODKEY|ShiftMask,             XK_space,                togglefloating, {0} },
 	{ MODKEY|ShiftMask,             XK_x,                    togglesticky,   {0} },
 	{ MODKEY|ShiftMask,             XK_y,                    togglesystray,  {0} },
-	{ MODKEY|ShiftMask,             XK_r,                    spawn,          SHCMD("killall -HUP dwm") },
 	{ MODKEY,                       XK_0,                    view,           {.ui = ~0 } },
 	{ MODKEY|ShiftMask,             XK_0,                    tag,            {.ui = ~0 } },
 
@@ -314,4 +309,3 @@ static Button buttons[] = {
 	{ ClkTagBar,            0,              Button4,        viewprev,          {0} },
 	{ ClkTagBar,            0,              Button5,        viewnext,          {0} },
 };
-
