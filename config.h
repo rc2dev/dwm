@@ -64,13 +64,12 @@ static const Rule rules[] = {
 	 */
 	/* class                  instance    title                    tags mask  isfloating  issticky  monitor */
 	/* Tags */
+	{ "Firefox",               NULL,      NULL,                    1 << 1,    0,          0,        -1 },
 	{ "Code",                  NULL,      NULL,                    1 << 2,    0,          0,        -1 },
 	{ "Virt-manager",          NULL,      NULL,                    1 << 5,    0,          0,        -1 },
 	{ "Virt-viewer",           NULL,      NULL,                    1 << 5,    0,          0,        -1 },
 	{ "Zenity",                NULL,      "virt-viewer",           1 << 5,    0,          0,        -1 },
 	{ "org.remmina.Remmina",   NULL,      NULL,                    1 << 5,    0,          0,        -1 },
-	{ "TelegramDesktop",       NULL,      NULL,                    1 << 5,    0,          0,        -1 },
-	{ "WebApp-WhatsApp",       NULL,      NULL,                    1 << 5,    0,          0,        -1 },
 	{ "thunderbird",           NULL,      NULL,                    1 << 6,    0,          0,        -1 },
 	{ "Geary",                 NULL,      NULL,                    1 << 6,    0,          0,        -1 },
 	{ NULL,                    "cmus",    NULL,                    1 << 7,    0,          0,        -1 },
@@ -84,7 +83,6 @@ static const Rule rules[] = {
 	{ "Blueman-manager",       NULL,      NULL,                    0,         1,          0,        -1 },
 	{ "Nm-connection-editor",  NULL,      NULL,                    0,         1,          0,        -1 },
 	{ "flameshot",             NULL,      NULL,                    0,         1,          0,        -1 },
-	{ "photoshop.exe",         NULL,      NULL,                    0,         1,          0,        -1 },
 
 	/* Floating and sticky */
 	{ "mpv",                   NULL,      NULL,                    0,         1,          1,        -1 },
