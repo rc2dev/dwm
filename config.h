@@ -65,6 +65,7 @@ static const Rule rules[] = {
 	/* class                  instance    title                    tags mask  isfloating  issticky  monitor */
 	/* Tags */
 	{ "Chromium",              NULL,      NULL,                    1 << 0,    0,          0,        -1 },
+	{ "obsidian",             NULL,      NULL,                    1 << 1,    0,          0,        -1 },
 	{ "Code",                  NULL,      NULL,                    1 << 2,    0,          0,        -1 },
 	{ "Virt-manager",          NULL,      NULL,                    1 << 5,    0,          0,        -1 },
 	{ "Virt-viewer",           NULL,      NULL,                    1 << 5,    0,          0,        -1 },
