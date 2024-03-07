@@ -69,14 +69,11 @@ static const Rule rules[] = {
 	{ "Code",                  NULL,      NULL,                    1 << 2,    0,          0,        -1 },
 	{ "Virt-manager",          NULL,      NULL,                    1 << 5,    0,          0,        -1 },
 	{ "Virt-viewer",           NULL,      NULL,                    1 << 5,    0,          0,        -1 },
-	{ "Zenity",                NULL,      "virt-viewer",           1 << 5,    0,          0,        -1 },
 	{ "org.remmina.Remmina",   NULL,      NULL,                    1 << 5,    0,          0,        -1 },
-	{ "thunderbird",           NULL,      NULL,                    1 << 6,    0,          0,        -1 },
-	{ "Geary",                 NULL,      NULL,                    1 << 6,    0,          0,        -1 },
+	{ "Firefox",               NULL,      NULL,                    1 << 6,    0,          0,        -1 },
 	{ NULL,                    "cmus",    NULL,                    1 << 7,    0,          0,        -1 },
 	{ "Rhythmbox",             NULL,      NULL,                    1 << 7,    0,          0,        -1 },
 	{ "Spotify",               NULL,      NULL,                    1 << 7,    0,          0,        -1 },
-	{ "Firefox",               NULL,      NULL,                    1 << 8,    0,          0,        -1 },
 
 	/* Floating */
 	{ "gnome-calculator",      NULL,      NULL,                    0,         1,          0,        -1 },
