@@ -20,7 +20,6 @@ _Notice: To cleanly integrate updates from upstream, this branch might be rebase
 - systray and "icon size"
 - tapresize
 - toggle systray
-- truecenteredtitle
 - vanitygaps
 - xresources
 
