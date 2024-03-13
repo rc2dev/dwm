@@ -14,6 +14,7 @@ _Notice: To cleanly integrate updates from upstream, this branch might be rebase
 - focusonnetactive
 - hide vacant tags
 - noborder
+- notitle
 - pertag
 - restartsig
 - sticky
