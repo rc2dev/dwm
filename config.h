@@ -129,10 +129,8 @@ static const Layout layouts[] = {
 	{ MODKEY|ShiftMask,             KEY,      tag,            {.ui = 1 << TAG} }, \
 	{ MODKEY|ControlMask|ShiftMask, KEY,      toggletag,      {.ui = 1 << TAG} },
 #define STACKKEYS(MOD,ACTION) \
-	{ MOD,           XK_j,   ACTION##stack, {.i = INC(+1) } }, \
-	{ MOD,           XK_k,   ACTION##stack, {.i = INC(-1) } }, \
-	{ MOD,           XK_Tab, ACTION##stack, {.i = INC(+1) } }, \
-	{ MOD|ShiftMask, XK_Tab, ACTION##stack, {.i = INC(-1) } }, \
+	{ MOD, XK_j,   ACTION##stack, {.i = INC(+1) } }, \
+	{ MOD, XK_k,   ACTION##stack, {.i = INC(-1) } }, \
 	//{ MOD, XK_g,     ACTION##stack, {.i = 0 } }, \
 	//{ MOD, XK_a,     ACTION##stack, {.i = 1 } }, \
 	//{ MOD, XK_z,     ACTION##stack, {.i = 2 } }, \
@@ -251,8 +249,8 @@ static Key keys[] = {
 	{ 0,                            XF86XK_Display,           spawn,         SHCMD("hotplug-monitor cycle") },
 
 	/* tags */
-	{ MODKEY,                       XK_apostrophe,    viewnext,       {0} },
-	{ MODKEY|ShiftMask,             XK_apostrophe,    viewprev,       {0} },
+	{ MODKEY,                       XK_Tab,    viewnext,       {0} },
+	{ MODKEY|ShiftMask,             XK_Tab,    viewprev,       {0} },
 	//{ MODKEY|ShiftMask,             XK_Right,  tagtonext,      {0} },
 	//{ MODKEY|ShiftMask,             XK_Left,   tagtoprev,      {0} },
 	TAGKEYS(                        XK_1,                    0)
