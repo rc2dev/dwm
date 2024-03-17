@@ -66,7 +66,7 @@ static const Rule rules[] = {
 
 	/* Tags */
 	{ "Code",                  NULL,      NULL,                    1 << 2,    0,          0,        -1 },
-	{ "obsidian",             NULL,      NULL,                     1 << 3,    0,          0,        -1 },
+	{ "obsidian",              NULL,      NULL,                    1 << 3,    0,          0,        -1 },
 	{ "Virt-manager",          NULL,      NULL,                    1 << 5,    0,          0,        -1 },
 	{ "Virt-viewer",           NULL,      NULL,                    1 << 5,    0,          0,        -1 },
 	{ "org.remmina.Remmina",   NULL,      NULL,                    1 << 5,    0,          0,        -1 },
@@ -83,10 +83,10 @@ static const Rule rules[] = {
 	{ "Nm-connection-editor",  NULL,      NULL,                    0,         1,          0,        -1 },
 	{ "flameshot",             NULL,      NULL,                    0,         1,          0,        -1 },
 	{ "Nemo",                  NULL,      NULL,                    0,         1,          0,        -1 },
+	{ "mpv",                   NULL,      NULL,                    0,         1,          0,        -1 },
+	{ NULL,                    NULL,      "Picture in picture",    0,         1,          0,        -1 },
 
 	/* Floating and sticky */
-	{ "mpv",                   NULL,      NULL,                    0,         1,          1,        -1 },
-	{ NULL,                    NULL,      "Picture in picture",    0,         1,          1,        -1 },
 	/* Float works oob. We set as sticky so it is placed on bottom right. */
 	{ "Galendae",              NULL,      NULL,                    0,         1,          1,        -1 },
 };
