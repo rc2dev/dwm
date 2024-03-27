@@ -1,6 +1,6 @@
 # dwm - dynamic window manager
 
-Build of dwm by [Rafael Cavalcanti](https://rafaelc.org/dev), 2020-2023. dwm is an extremely fast, small, and dynamic window manager for X.
+Build of dwm by [Rafael Cavalcanti](https://rafaelc.org/dev), 2020-2024. dwm is an extremely fast, small, and dynamic window manager for X.
 
 _Notice: To cleanly integrate updates from upstream, this branch might be rebased._
 
