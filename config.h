@@ -55,7 +55,7 @@ static char *colors[][3] = {
 };
 
 /* tagging */
-static const char *tags[] = { "1:www", "2:ter", "3:etc", "4:not", "5:etc", "6:vir", "7:sur", "8:mus", "9:etc" };
+static const char *tags[] = { "1:www", "2:ter", "3:not", "4:etc", "5:etc", "6:etc", "7:vir", "8:sur", "9:mus" };
 
 static const Rule rules[] = {
 	/* xprop(1):
@@ -66,15 +66,13 @@ static const Rule rules[] = {
 
 	/* Tags */
 	{ "Chromium",              NULL,      NULL,                    1 << 0,    0,          0,        -1 },
-	{ "Code",                  NULL,      NULL,                    1 << 2,    0,          0,        -1 },
-	{ "obsidian",              NULL,      NULL,                    1 << 3,    0,          0,        -1 },
-	{ "Virt-manager",          NULL,      NULL,                    1 << 5,    0,          0,        -1 },
-	{ "Virt-viewer",           NULL,      NULL,                    1 << 5,    0,          0,        -1 },
-	{ "org.remmina.Remmina",   NULL,      NULL,                    1 << 5,    0,          0,        -1 },
-	{ "Firefox",               NULL,      NULL,                    1 << 6,    0,          0,        -1 },
-	{ NULL,                    "cmus",    NULL,                    1 << 7,    0,          0,        -1 },
-	{ "Rhythmbox",             NULL,      NULL,                    1 << 7,    0,          0,        -1 },
-	{ "Spotify",               NULL,      NULL,                    1 << 7,    0,          0,        -1 },
+	{ "Code",                  NULL,      NULL,                    1 << 1,    0,          0,        -1 },
+	{ "obsidian",              NULL,      NULL,                    1 << 2,    0,          0,        -1 },
+	{ "Virt-manager",          NULL,      NULL,                    1 << 6,    0,          0,        -1 },
+	{ "Virt-viewer",           NULL,      NULL,                    1 << 6,    0,          0,        -1 },
+	{ "Firefox",               NULL,      NULL,                    1 << 7,    0,          0,        -1 },
+	{ NULL,                    "cmus",    NULL,                    1 << 8,    0,          0,        -1 },
+	{ "Spotify",               NULL,      NULL,                    1 << 8,    0,          0,        -1 },
 
 	/* Floating */
 	{ "gnome-calculator",      NULL,      NULL,                    0,         1,          0,        -1 },
