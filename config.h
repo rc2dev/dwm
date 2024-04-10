@@ -69,6 +69,7 @@ static const Rule rules[] = {
 	{ "st-256color",           "st-256color", NULL,                1 << 1,    0,          0,        -1 },
 	{ "Code",                  NULL,      NULL,                    1 << 1,    0,          0,        -1 },
 	{ "obsidian",              NULL,      NULL,                    1 << 2,    0,          0,        -1 },
+	{ "thunderbird",           NULL,      NULL,                    1 << 5,    0,          0,        -1 },
 	{ "Virt-manager",          NULL,      NULL,                    1 << 6,    0,          0,        -1 },
 	{ "Virt-viewer",           NULL,      NULL,                    1 << 6,    0,          0,        -1 },
 	{ "Firefox",               NULL,      NULL,                    1 << 7,    0,          0,        -1 },
