@@ -251,11 +251,6 @@ static Key keys[] = {
 	{ 0,                            XF86XK_AudioMicMute,      spawn,         SHCMD("pactl -- set-source-mute 1 toggle") },
 	{ 0,                            XF86XK_Display,           spawn,         SHCMD("hotplug-monitor cycle") },
 
-	/* tags */
-	{ MODKEY,                       XK_Tab,    viewnext,       {0} },
-	{ MODKEY|ShiftMask,             XK_Tab,    viewprev,       {0} },
-	//{ MODKEY|ShiftMask,             XK_Right,  tagtonext,      {0} },
-	//{ MODKEY|ShiftMask,             XK_Left,   tagtoprev,      {0} },
 	TAGKEYS(                        XK_1,                    0)
 	TAGKEYS(                        XK_2,                    1)
 	TAGKEYS(                        XK_3,                    2)
@@ -304,6 +299,4 @@ static Button buttons[] = {
 	{ ClkTagBar,            0,              Button3,        toggleview,        {0} },
 	{ ClkTagBar,            MODKEY,         Button1,        tag,               {0} },
 	{ ClkTagBar,            MODKEY,         Button3,        toggletag,         {0} },
-	{ ClkTagBar,            0,              Button4,        viewprev,          {0} },
-	{ ClkTagBar,            0,              Button5,        viewnext,          {0} },
 };

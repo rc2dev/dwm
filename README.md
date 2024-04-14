@@ -6,7 +6,6 @@ _Notice: To cleanly integrate updates from upstream, this branch might be rebase
 
 ## Third party patches
 
-- adjacenttag "skipvacant" version
 - alwayscenter
 - bar height
 - cyclelayouts
