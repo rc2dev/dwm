@@ -2,6 +2,8 @@
 
 Build of dwm by [Rafael Cavalcanti](https://rafaelc.org/dev), 2020-2024. dwm is an extremely fast, small, and dynamic window manager for X.
 
+Refer to [ansible-role-dwm](https://github.com/rc2dev/ansible-role-dwm) for the full environment.
+
 _Notice: To cleanly integrate updates from upstream, this branch might be rebased._
 
 ## Third party patches
