@@ -75,6 +75,7 @@ static const Rule rules[] = {
 	{ "Virt-manager",          NULL,      NULL,                    1 << 6,    0,          0,        -1 },
 	{ "Virt-viewer",           NULL,      NULL,                    1 << 6,    0,          0,        -1 },
 	{ "firefox",               NULL,      NULL,                    1 << 7,    0,          0,        -1 },
+	{ "Microsoft-edge",        NULL,      NULL,                    1 << 7,    0,          0,        -1 },
 	{ NULL,                    "cmus",    NULL,                    1 << 8,    0,          0,        -1 },
 	{ "Spotify",               NULL,      NULL,                    1 << 8,    0,          0,        -1 },
 	/* Chromium app: Navidrome */
